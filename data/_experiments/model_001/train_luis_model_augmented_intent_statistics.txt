@@ -1,0 +1,6 @@
+No	Intent	Utterance Count	Utterance Average Length	Utterance Maximum Length	Utterance Minimum Length	Utterance Length StdDev
+0	l-ddk-calendar	1259	33.79428	123	2	15.8362
+1	l-ddk-greeting	10	7.1	12	2	3.60401
+2	q_ddk-knowledge	13	12.46154	23	6	5.83974
+3	None	7	17.57143	24	11	4.85994
+ 	__ALL__	1289	33.28394	123	2	16.02366

@@ -1,0 +1,259 @@
+Label	Weight	Text
+l-ddk-calendar	1	find a meeting with subject weekly report
+l-ddk-calendar	1	put test appointment in my calendar tomorrow at 7
+l-ddk-calendar	1	please move this to 3 pm
+l-ddk-calendar	1	cancel today ' s appointment
+l-ddk-calendar	1	join current conference call
+l-ddk-calendar	1	schedule a breakfast meeting at 8 am tomorrow
+l-ddk-calendar	1	who will be at the kids game
+l-ddk-calendar	1	forget cancel
+l-ddk-calendar	1	call into marketing meeting
+l-ddk-calendar	1	what ' s on my schedule
+l-ddk-calendar	1	join conference call
+l-ddk-calendar	1	nokia conference room join
+l-ddk-calendar	1	add date night on the 5th at 7pm every month
+l-ddk-calendar	1	where is my current meeting
+l-ddk-calendar	1	new calendar item
+l-ddk-calendar	1	i think not
+l-ddk-calendar	1	appending group meeting next monday at 11am for an hour
+l-ddk-calendar	1	cancel lunch next wednesday
+l-ddk-calendar	1	who is attending 2 pm meeting tomorrow
+l-ddk-calendar	1	when is sports day for the girls
+l-ddk-calendar	1	alert attendees of dinner meeting that i will be late
+l-ddk-calendar	1	meet ming yang for lunch on tuesday at noon
+l-ddk-calendar	1	where is the meeting
+l-ddk-calendar	1	cancel all events
+l-ddk-calendar	1	am i free
+l-ddk-calendar	1	connect me to conference call
+l-ddk-calendar	1	detailed information about the next meeting
+l-ddk-calendar	1	add work to calendar sunday 10 till 5
+l-ddk-calendar	1	none
+l-ddk-calendar	1	that's correct
+l-ddk-calendar	1	not this saturday
+l-ddk-calendar	1	what is my meeting with ming xu about
+l-ddk-calendar	1	how much time is there for errands during my lunch break
+l-ddk-calendar	1	no cancel it
+l-ddk-calendar	1	please inform work contact group that i am running late for the meeting
+l-ddk-calendar	1	notify friday's 2 pm that we are cancelling the meeting
+l-ddk-calendar	1	schedule lunch with madden on tuesday
+l-ddk-calendar	1	is raymond free on monday evening
+l-ddk-calendar	1	could you show the next one
+l-ddk-calendar	1	add chorus concert to calendar for may 1st at 3 pm
+l-ddk-calendar	1	postpone my 4 pm meeting today until 5 pm
+l-ddk-calendar	1	this meeting should be changed to tomorrow
+l-ddk-calendar	1	dial into conference call
+l-ddk-calendar	1	will thomas be in insurance meeting monday at noon
+l-ddk-calendar	1	link join my next meeting
+l-ddk-calendar	1	change my meeting at night to tomorrow
+l-ddk-calendar	1	how many days till christmas
+l-ddk-calendar	1	please cancel that
+l-ddk-calendar	1	i'm sure
+l-ddk-calendar	1	please find another meeting room
+l-ddk-calendar	1	update my calendar from 11 to 12:30 today
+l-ddk-calendar	1	location of the next appointment
+l-ddk-calendar	1	create appointment for 30 minutes
+l-ddk-calendar	1	alert quality control meeting participants that the meeting will be 30 minutes later
+l-ddk-calendar	1	update my calendar from 6pm to 7pm
+l-ddk-calendar	1	when's my haircut
+l-ddk-calendar	1	schedule an appointment with madden for wednesday the 20 4th at 9 30 am
+l-ddk-calendar	1	change developmental agenda for lunch tomorrow
+l-ddk-calendar	1	show me my schedule tonight
+l-ddk-calendar	1	schedule an appointment to groom my dogs at petco on friday at 6 pm
+l-ddk-calendar	1	tell me the events scheduled at calendar constitution hall
+l-ddk-calendar	1	cancel the meeting with julie
+l-ddk-calendar	1	i cannot
+l-ddk-calendar	1	details about the meeting with karen and tom
+l-ddk-calendar	1	am i available on monday at 9 pm
+l-ddk-calendar	1	what's next
+l-ddk-calendar	1	create a meeting from 9pm to tomorrow 6am
+l-ddk-calendar	1	where are my meetings today
+l-ddk-calendar	1	please inform the thomas that i will be late for the meeting
+l-ddk-calendar	1	reserve the conference room for 3pm tomorrow
+l-ddk-calendar	1	will paul be going to the meeting on friday
+l-ddk-calendar	1	clear all my appointments
+l-ddk-calendar	1	is my lunch long enough for errands
+l-ddk-calendar	1	i'd like to cancel this
+l-ddk-calendar	1	what's happening tomorrow
+l-ddk-calendar	1	schedule a visit to the market this saturday at 10 o clock
+l-ddk-calendar	1	where ' s my next appointment
+l-ddk-calendar	1	move my 10 past 10 doctor ' s appointment to 10
+l-ddk-calendar	1	negative
+l-ddk-calendar	1	change the end time of my 3 o'clock meeting to 3 30 pm
+l-ddk-calendar	1	join meeting now
+l-ddk-calendar	1	i would like to go back
+l-ddk-calendar	1	clear my schedule today
+l-ddk-calendar	1	book blue meeting room
+l-ddk-calendar	1	tell next meeting that i'm running late
+l-ddk-calendar	1	make me a dentist appointment wednesday at two forty five
+l-ddk-calendar	1	i don't want to change it anymore
+l-ddk-calendar	1	meeting with morrison yang at 4
+l-ddk-calendar	1	schedule mechanics exam at 12 pm on friday
+l-ddk-calendar	1	cancel the event
+l-ddk-calendar	1	cancel dinner
+l-ddk-calendar	1	what ' s in my calendar for today
+l-ddk-calendar	1	details about the meeting with grace
+l-ddk-calendar	1	can you tell me if my husband is free on sunday
+l-ddk-calendar	1	how much time for lunch today
+l-ddk-calendar	1	change the title of my 11am appointment to soccer practice
+l-ddk-calendar	1	where shall we meet
+l-ddk-calendar	1	remove dentist appointment
+l-ddk-calendar	1	please cancel
+l-ddk-calendar	1	drop my appointment for monday
+l-ddk-calendar	1	how much time is set for the bill payments
+l-ddk-calendar	1	clear my calendar
+l-ddk-calendar	1	how many days left until the opening ceremony
+l-ddk-calendar	1	can you cancel the 1st one
+l-ddk-calendar	1	reserve room 101 now
+l-ddk-calendar	1	schedule an appointment for thursday at 3 pm haircut
+l-ddk-calendar	1	book a meeting between 2 and 3 tomorrow
+l-ddk-calendar	1	back one step
+l-ddk-calendar	1	make the appointment ending at 2 go until 4 pm
+l-ddk-calendar	1	not that time
+l-ddk-calendar	1	where is margot lunch
+l-ddk-calendar	1	add kane s dr appt to calendar for 3 friday
+l-ddk-calendar	1	is carolyn available tuesday afternoon
+l-ddk-calendar	1	change my 3pm event to 4pm
+l-ddk-calendar	1	schedule an appointment for me on tomorrow
+l-ddk-calendar	1	cancel my appointment
+l-ddk-calendar	1	cancel this meeting
+l-ddk-calendar	1	i have decided to cancel it
+l-ddk-calendar	1	never mind, forget about the creating
+l-ddk-calendar	1	join my meeting
+l-ddk-calendar	1	help me to book the room 102
+l-ddk-calendar	1	join the meeting
+l-ddk-calendar	1	conference join
+l-ddk-calendar	1	set up an appointment with tom
+l-ddk-calendar	1	who is going to the meeting at 2 pm tomorrow
+l-ddk-calendar	1	make me an appointment tomorrow at 2 30 pm
+l-ddk-calendar	1	connect me to the marketing meeting
+l-ddk-calendar	1	how much time before next appointment
+l-ddk-calendar	1	cancel event
+l-ddk-calendar	1	accept my meeting at 7pm today
+l-ddk-calendar	1	how long is that meeting going to last
+l-ddk-calendar	1	add church to personal calendar on sundays at 9
+l-ddk-calendar	1	delete an appointment
+l-ddk-calendar	1	check my family calendar
+l-ddk-calendar	1	please alert attendees meeting is at 8:30
+l-ddk-calendar	1	when does ellen have time to attend the meeting for business review
+l-ddk-calendar	1	could you cancel it please
+l-ddk-calendar	1	is russell free on friday at 4pm
+l-ddk-calendar	1	schedule an appointment for me today
+l-ddk-calendar	1	delete meeting
+l-ddk-calendar	1	message everyone advising that i will be late to the meeting
+l-ddk-calendar	1	please schedule an all hands meeting for 2 hours
+l-ddk-calendar	1	yes thanks
+l-ddk-calendar	1	send a message to the meeting attendees that the meeting will now start at 8 30 am
+l-ddk-calendar	1	no thank you
+l-ddk-calendar	1	find a meeting about plan
+l-ddk-calendar	1	i want to take a look at the attendee list
+l-ddk-calendar	1	move my meeting up by half an hour
+l-ddk-calendar	1	minutes in lunch break
+l-ddk-calendar	1	confirm
+l-ddk-calendar	1	schedule an appointment for 10 30 in the morning on january 20 1st
+l-ddk-calendar	1	sounds great
+l-ddk-calendar	1	where ' s my meeting
+l-ddk-calendar	1	cancel my meeting
+l-ddk-calendar	1	schedule an appointment to call meredith at 12
+l-ddk-calendar	1	i would like to cancel all of them
+l-ddk-calendar	1	how many minutes free do i have before next scheduled appointment
+l-ddk-calendar	1	change appointment
+l-ddk-calendar	1	schedule yoga class from 2 pm to 3 pm
+l-ddk-calendar	1	did martin come to today's meeting
+l-ddk-calendar	1	please return back
+l-ddk-calendar	1	attend the meeting held at 3pm next tuesday at the conference center.
+l-ddk-calendar	1	who else is going to the 2pm meeting tomorrow
+l-ddk-calendar	1	schedule a massage on tuesday
+l-ddk-calendar	1	how long is it until the 14th of march
+l-ddk-calendar	1	how long is my lunch today
+l-ddk-calendar	1	return to the previous step
+l-ddk-calendar	1	book a conference room
+l-ddk-calendar	1	do i have any appointments today
+l-ddk-calendar	1	create a meeting at 9:35am
+l-ddk-calendar	1	how long is the event
+l-ddk-calendar	1	schedule an appointment with madden
+l-ddk-calendar	1	how long is my meeting at 4
+l-ddk-calendar	1	book a meeting between 2:30pm and 4:45pm tomorrow
+l-ddk-calendar	1	who is attending the meeting on wednesday
+l-ddk-calendar	1	locate another meeting location
+l-ddk-calendar	1	what is my 1st meeting today
+l-ddk-calendar	1	will ed be in the finance meeting
+l-ddk-calendar	1	what ' s my next meeting
+l-ddk-calendar	1	okay
+l-ddk-calendar	1	please notify george that i will be late for the meeting
+l-ddk-calendar	1	schedule dry cleaning pick up at three thirty pm today
+l-ddk-calendar	1	yes it is
+l-ddk-calendar	1	add the lunch with my colleague naomi from 12 to 2 in my personal calendar
+l-ddk-calendar	1	what am i doing tonight
+l-ddk-calendar	1	how many days is it until christmas
+l-ddk-calendar	1	2 pm meeting tomorrow - who else is going
+l-ddk-calendar	1	cancel tomorrow ' s plan
+l-ddk-calendar	1	delete the 1st one from my calendar
+l-ddk-calendar	1	new appointment in calendar
+l-ddk-calendar	1	nothing
+l-ddk-calendar	1	list the participants for the 2 pm meeting tomorrow
+l-ddk-calendar	1	am i free for drinks monday at 5
+l-ddk-calendar	1	schedule lunch with madden for 11 30 am on wednesday
+l-ddk-calendar	1	schedule art show on calendar for noon on march 6th
+l-ddk-calendar	1	how much time before lunch
+l-ddk-calendar	1	accept an appointment
+l-ddk-calendar	1	how many days until my doctor ' s appointment
+l-ddk-calendar	1	create a meeting with tom34@outlook.com
+l-ddk-calendar	1	locate the next appointment
+l-ddk-calendar	1	find me an empty conference room
+l-ddk-calendar	1	show me heather 's calendar
+l-ddk-calendar	1	cancel cancel cancel
+l-ddk-calendar	1	tell me about my planned trip
+l-ddk-calendar	1	when is the wedding tomorrow
+l-ddk-calendar	1	change the title of my appointment
+l-ddk-calendar	1	reschedule my 3:30 dentist appointment today for 4pm tomorrow
+l-ddk-calendar	1	who is in that meeting
+l-ddk-calendar	1	when is my next meeting
+l-ddk-calendar	1	no thanks
+l-ddk-calendar	1	move my twelve p . m . meeting forward two hours
+l-ddk-calendar	1	am i free today
+l-ddk-calendar	1	no
+l-ddk-calendar	1	notify noah that our meeting is pushed back 30 minutes
+l-ddk-calendar	1	cancel 1 pm staff meeting
+l-ddk-calendar	1	march 15 dinner at refectory at 6 pm
+l-ddk-calendar	1	put dentist appointment in my calendar for tomorrow at one pm
+l-ddk-calendar	1	cancel the creating process
+l-ddk-calendar	1	move my next meeting out by 30 minutes
+l-ddk-calendar	1	never mind, cancel the changing
+l-ddk-calendar	1	running late for the board meeting alert catherine dennis and all the other attendees
+l-ddk-calendar	1	am i free to drive with kim on thurs at 3 pm
+l-ddk-calendar	1	schedule a workout with madden to my calendar
+l-ddk-calendar	1	accept the appointment sent by lucas
+l-ddk-calendar	1	where is my fourth event with brandon friday
+l-ddk-calendar	1	when do i work tomorrow
+l-ddk-calendar	1	add me to conference call
+l-ddk-calendar	1	reserve room 258
+l-ddk-calendar	1	attend the lunch meeting at 10:30 am.
+l-ddk-calendar	1	put yoga on my calendar for mondays and wednesdays at 3 pm
+l-ddk-calendar	1	just cancel
+l-ddk-calendar	1	check my calendar
+l-ddk-calendar	1	show previous one
+l-ddk-calendar	1	new appointment tomorrow at 3 pm at sunken
+l-ddk-calendar	1	go back to the last step
+l-ddk-calendar	1	how long is the movie jurassic world
+l-ddk-calendar	1	time for lunch errands
+l-ddk-calendar	1	return
+l-ddk-calendar	1	what is my next event
+l-ddk-calendar	1	meeting will start soon remind everybody involved
+l-ddk-calendar	1	cancel
+l-ddk-calendar	1	delete my schedule
+l-ddk-calendar	1	join current budget conf call
+l-ddk-calendar	1	how much time do i have before my next meeting
+l-ddk-calendar	1	cancel my adventureworks trip to seattle
+l-ddk-calendar	1	change my vacation from ending on friday to monday
+l-ddk-calendar	1	back
+l-ddk-calendar	1	schedule an appointment with mom
+l-ddk-calendar	1	notify all attendees about the change
+l-ddk-calendar	1	add work to my calendar monday 6 am to 11 am
+l-ddk-calendar	1	start my conference
+l-ddk-calendar	1	is charles wong going to be at the meeting
+l-ddk-greeting	1	whats up
+l-ddk-greeting	1	wazup
+None	1	how's the weather today
+q_ddk-knowledge	1	contact
+q_ddk-knowledge	1	office
+q_ddk-knowledge	1	clients
