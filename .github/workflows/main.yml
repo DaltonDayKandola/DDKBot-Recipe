@@ -40,34 +40,38 @@ jobs:
 
     steps:
 
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-
-    - uses: actions/checkout@v2
+    # checkout the repo
+    - name: 'Checkout GitHub Action' 
+      uses: actions/checkout@master
+   
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.DDKBOT_AZURE_CREDENTIALS }}
 
 # Runs a single command using the runners shell
 
     - name: Setup Dotnet 4.7.x
-
       uses: actions/setup-dotnet@v1
-
       with:
-
         dotnet-version: '4.7.7'
 
       
 
     - name: 'Run dotnet build'
-
       shell: bash
-
       run: |
-
         # If your web app project is not located in your repository's root
-
         # Please consider using pushd to change your path
-
         pushd .
-
         dotnet build --configuration Release --output ./output
-
         popd
+        
+        # deploy web app using Azure credentials
+        - uses: azure/webapps-deploy@v2
+          with:
+          app-name: 'ddkbot-webapp-1'
+
+        # Azure logout 
+        - name: logout
+          run: |
+            az logout
