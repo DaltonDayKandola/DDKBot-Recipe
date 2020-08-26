@@ -29,7 +29,7 @@ jobs:
    
     - uses: azure/login@v1
       with:
-        creds: ${{ secrets.DDKBOT_AZURE_CREDENTIALS }}
+        creds: ${{ secrets.DDK_BOT_AZURE_CREDENTIALS }}
 
 # Runs a single command using the runners shell
 

@@ -1,0 +1,39 @@
+{
+  "authoringRegion": "westeurope",
+  "hierarchical": true,
+  "useAllTrainingData": true,
+  "dontReviseUtterance": false,
+  "copyLuisData": true,
+  "normalizeDiacritics": true,
+  "services": [
+    {
+      "intentName": "l-ddk-greeting",
+      "appId": "75f17b7f-05c4-42ca-b220-e36874514fd5",
+      "authoringKey": "f90f02cef9824706ab50cad89c150b73",
+      "version": "0.1",
+      "region": "westeurope",
+      "type": "luis",
+      "name": "DDK-luis-Greeting",
+      "id": "1"
+    },
+    {
+      "intentName": "q_ddk-knowledge",
+      "includePrompts": true,
+      "kbId": "ab239e4b-c898-4bc7-8a41-a3518b4cbc12",
+      "subscriptionKey": "e54348d77f6f4acda25ba7a1f7580dfa",
+      "type": "qna",
+      "name": "ddk-knowledge-1",
+      "id": "2"
+    }
+  ],
+  "serviceIds": [
+    "1",
+    "2"
+  ],
+  "appId": "61ba6b59-e369-4055-b513-c220d12167f6",
+  "authoringKey": "f90f02cef9824706ab50cad89c150b73",
+  "version": "Dispatch",
+  "region": "westeurope",
+  "type": "dispatch",
+  "name": "botdispatch-knowledge-1"
+}
