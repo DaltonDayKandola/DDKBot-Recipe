@@ -37,19 +37,17 @@ jobs:
         creds: ${{ secrets.DDK_BOT_AZURE_CREDENTIALS }}
 
 # Runs a single command using the runners shell
-
     - name: 'Setup Dotnet ${{ env.DOTNET_VERSION }}'
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '${{ env.DOTNET_VERSION }}'
 
    # Run dotnet build and publish
-
-      - name: 'dotnet build and publish'
-        run: |
-          dotnet restore
-          dotnet build --configuration Release
-          dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/DDKBot' 
+    - name: 'dotnet build and publish'
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/DDKBot' 
       
     #  Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
