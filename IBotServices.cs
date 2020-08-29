@@ -7,6 +7,7 @@ using Microsoft.Bot.Builder.AI.Luis;
 using Microsoft.Bot.Builder.AI.QnA;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
+using Microsoft.Bot.Builder.Dialogs;
 
 
 namespace Microsoft.BotBuilderSamples
@@ -21,6 +22,7 @@ namespace Microsoft.BotBuilderSamples
         QnAMaker DDKQnA { get; }
         BotState conversationState { get; }
         BotState userState { get; }
+        Dialog UserProfileDialog { get; }
     }
 
 }

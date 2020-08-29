@@ -7,6 +7,7 @@ using Microsoft.Bot.Builder.AI.QnA;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
+using Microsoft.Bot.Builder.Dialogs;
 
 namespace Microsoft.BotBuilderSamples
 {
@@ -56,14 +57,13 @@ namespace Microsoft.BotBuilderSamples
             userState = new UserState(storage);
 
             // Create the Conversation state passing in the storage layer.
-            conversationState = new ConversationState(storage);
+            conversationState = new ConversationState(storage)
 
-
-        }
         public LuisRecognizer Dispatch { get; private set; }
         public QnAMaker DDKQnA { get; private set; }     
         public BotState conversationState { get; private set; }
         public BotState userState { get; private set; }   
+        public Dialog UserProfileDialog { get; private set; }   
 
     }
 

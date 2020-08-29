@@ -12,6 +12,7 @@ using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime.Models;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
+using Microsoft.Bot.Builder.Dialogs;
 
 namespace Microsoft.BotBuilderSamples
 {
@@ -34,7 +35,6 @@ namespace Microsoft.BotBuilderSamples
              await base.OnTurnAsync(turnContext, cancellationToken);
 
            //  Save any state changes that might have occurred during the turn.
-
             await _botServices.conversationState.SaveChangesAsync(turnContext, false, cancellationToken);
             await _botServices.userState.SaveChangesAsync(turnContext, false, cancellationToken);
         }
@@ -55,7 +55,7 @@ namespace Microsoft.BotBuilderSamples
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            const string WelcomeText = "Ask a question about what we do or book an appointment.";
+            const string WelcomeText = "How can I help you today?";
 
             foreach (var member in membersAdded)
             {
@@ -82,6 +82,12 @@ namespace Microsoft.BotBuilderSamples
 
                     break;
 
+                case "l-ddk-contact":
+
+                    await ProcessContactAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+
+                    break;
+
                 case "q_ddk-knowledge":
 
                     await ProcessDDKQnAAsync(turnContext, cancellationToken);
@@ -101,11 +107,8 @@ namespace Microsoft.BotBuilderSamples
         }
 
 
-
         private async Task ProcessGreetingAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
-
         {
-
             _logger.LogInformation("ProcessGreetingAsync");
 
             var conversationStateAccessors =  _botServices.conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
@@ -183,6 +186,20 @@ namespace Microsoft.BotBuilderSamples
         }
 
 
+private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
+
+        {
+            _logger.LogInformation("Running dialog with Message Activity.");
+
+
+            // Retrieve LUIS results for Contact.
+            await turnContext.SendActivityAsync(MessageFactory.Text($"ProcessContact entities were found in the message"), cancellationToken);
+
+            // Run the Dialog with the new message Activity.
+            await  _botServices.UserProfileDialog.RunAsync(turnContext,  _botServices.conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+
+        }
+
 
         private async Task ProcessDDKQnAAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 
@@ -200,7 +217,7 @@ namespace Microsoft.BotBuilderSamples
             {
                 await turnContext.SendActivityAsync($"Thanks {userProfile.Name}. You asked - {turnContext.Activity.Text}."); 
                 await turnContext.SendActivityAsync(MessageFactory.Text(results.First().Answer), cancellationToken);
-                await turnContext.SendActivityAsync($"If you want to know more about DDK  {userProfile.Name}, click here to contact us. Alternatively, you can book an appointment by asking me or clicking here.");
+                await turnContext.SendActivityAsync($"If you want to know more about DDK  {userProfile.Name}, ask me to contact you.");
 
             }
 
@@ -208,7 +225,7 @@ namespace Microsoft.BotBuilderSamples
 
             {
 
-                await turnContext.SendActivityAsync(MessageFactory.Text("Sorry, could not find an answer in the Q and A system."), cancellationToken);
+                await turnContext.SendActivityAsync(MessageFactory.Text("Sorry, I couldn't not find an answer to your question in our Q and A system. We will learn though and use your question to try and make things better. Come back later to see if we can do better?"), cancellationToken);
 
             }
 
