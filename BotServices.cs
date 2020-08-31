@@ -48,23 +48,13 @@ namespace Microsoft.BotBuilderSamples
                 Host = configuration["QnAEndpointHostName"]
             });
 
-            // Create the storage we'll be using for User and Conversation state.
-            // (Memory is great for testing purposes - examples of implementing storage with
-            // Azure Blob Storage or Cosmos DB are below).
-            var storage = new MemoryStorage();
-
-            // Create the User state passing in the storage layer.
-            userState = new UserState(storage);
-
-            // Create the Conversation state passing in the storage layer.
-            conversationState = new ConversationState(storage)
+          
+        }
 
         public LuisRecognizer Dispatch { get; private set; }
         public QnAMaker DDKQnA { get; private set; }     
-        public BotState conversationState { get; private set; }
-        public BotState userState { get; private set; }   
-        public Dialog UserProfileDialog { get; private set; }   
 
+    
     }
 
 }

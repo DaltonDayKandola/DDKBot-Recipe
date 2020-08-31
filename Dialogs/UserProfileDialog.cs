@@ -19,25 +19,34 @@ public class UserProfileDialog : ComponentDialog
     {
         private readonly IStatePropertyAccessor<UserProfile> _userProfileAccessor;
 
-    public UserProfileDialog(UserState userState)
+    public UserProfileDialog(UserState _userState)
         : base(nameof(UserProfileDialog))
         {
-            _userProfileAccessor = userState.CreateProperty<UserProfile>("UserProfile");
+            _userProfileAccessor = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            // Get the current profile object from user state.
+            
+            
 
-            // This array defines how the Waterfall will execute.
-            var waterfallSteps = new WaterfallStep[]
-            {   
-                ContactTypeStepAsync ,
-                NameStepAsync,
-                NameConfirmStepAsync,
-                SummaryStepAsync,
+            if (string.IsNullOrEmpty(userProfile.Name))
+                {
+                    // This array defines how the Waterfall will execute.
+                    var waterfallSteps = new WaterfallStep[]
+                    {   
+                        ContactTypeStepAsync ,
+                        NameStepAsync,
+                        NameConfirmStepAsync,
+                        SummaryStepAsync,
 
-            };
+                    };                    
+                }
+
 
             // Add named dialogs to the DialogSet. These names are saved in the dialog state.
 
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), waterfallSteps));
-            AddDialog(new TextPrompt(nameof(TextPrompt)));            
+            AddDialog(new TextPrompt(nameof(TextPrompt))); 
+            AddDialog(new ChoicePrompt(nameof(ChoicePrompt)));     
+            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));      
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
@@ -55,23 +64,26 @@ public class UserProfileDialog : ComponentDialog
                 }, cancellationToken);
         }
 
-        private static async Task<DialogTurnResult> NameStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private  async Task<DialogTurnResult> NameStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            stepContext.Values["contacttype"] = ((FoundChoice)stepContext.Result).Value;
+            stepContext.Values["contacttype"] = ((FoundChoice)stepContext.Result).Value;        
 
             return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = MessageFactory.Text("Please enter your name.") }, cancellationToken);
+        
         }
 
 
         private async Task<DialogTurnResult> NameConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
+
             stepContext.Values["name"] = (string)stepContext.Result;
+
 
             // We can send messages to the user at any point in the WaterfallStep.
             await stepContext.Context.SendActivityAsync(MessageFactory.Text($"Thanks {stepContext.Result}."), cancellationToken);
 
             // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
-            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = MessageFactory.Text("Would you like to give your age?") }, cancellationToken);
+            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = MessageFactory.Text("What is your number?") }, cancellationToken);
         }
 
         private async Task<DialogTurnResult> SummaryStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)

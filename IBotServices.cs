@@ -20,9 +20,7 @@ namespace Microsoft.BotBuilderSamples
 
         LuisRecognizer Dispatch { get; }
         QnAMaker DDKQnA { get; }
-        BotState conversationState { get; }
-        BotState userState { get; }
-        Dialog UserProfileDialog { get; }
+
     }
 
 }

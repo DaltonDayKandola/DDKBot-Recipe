@@ -13,6 +13,7 @@ namespace Microsoft.BotBuilderSamples
 
         public string Name { get; set; }
         public string ContactType { get; set; }
+        public string ContactValue { get; set; }
 
     }
 

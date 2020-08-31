@@ -21,11 +21,19 @@ namespace Microsoft.BotBuilderSamples
 
         private readonly ILogger<DispatchBot> _logger;
         private readonly IBotServices _botServices;
-        public DispatchBot(IBotServices botServices, ILogger<DispatchBot> logger)
+        private readonly UserProfileDialog _userProfileDialog;
+        protected readonly BotState _conversationState;
+        protected readonly BotState _userState;
+
+
+        public DispatchBot(IBotServices botServices,ConversationState conversationState, UserState userState, UserProfileDialog userProfileDialog, ILogger<DispatchBot> logger)
 
         {
             _logger = logger;
             _botServices = botServices;
+            _userProfileDialog = userProfileDialog;
+            _conversationState = conversationState;
+            _userState = userState;
 
         }
 
@@ -35,8 +43,8 @@ namespace Microsoft.BotBuilderSamples
              await base.OnTurnAsync(turnContext, cancellationToken);
 
            //  Save any state changes that might have occurred during the turn.
-            await _botServices.conversationState.SaveChangesAsync(turnContext, false, cancellationToken);
-            await _botServices.userState.SaveChangesAsync(turnContext, false, cancellationToken);
+            await _conversationState.SaveChangesAsync(turnContext, false, cancellationToken);
+            await _userState.SaveChangesAsync(turnContext, false, cancellationToken);
         }
         
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -111,9 +119,9 @@ namespace Microsoft.BotBuilderSamples
         {
             _logger.LogInformation("ProcessGreetingAsync");
 
-            var conversationStateAccessors =  _botServices.conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
+            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
             var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
-            var userStateAccessors = _botServices.userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
             var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
             
 
@@ -196,7 +204,7 @@ private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContex
             await turnContext.SendActivityAsync(MessageFactory.Text($"ProcessContact entities were found in the message"), cancellationToken);
 
             // Run the Dialog with the new message Activity.
-            await  _botServices.UserProfileDialog.RunAsync(turnContext,  _botServices.conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
+            await _userProfileDialog.RunAsync(turnContext, _conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);
 
         }
 
@@ -205,7 +213,7 @@ private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContex
 
         {
 
-            var userStateAccessors = _botServices.userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
             var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
 
             _logger.LogInformation("ProcessDDKQnAAsync");
