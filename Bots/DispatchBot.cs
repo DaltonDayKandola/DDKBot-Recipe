@@ -75,41 +75,64 @@ namespace Microsoft.BotBuilderSamples
         }
         private async Task DispatchToTopIntentAsync(ITurnContext<IMessageActivity> turnContext, string intent, RecognizerResult recognizerResult, CancellationToken cancellationToken)
         {
-            switch (intent)
+
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
+
+            if (userProfile.ContactDialogueFlow ==true)
             {
+                await ProcessContactAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+            }
+            else
+            {
+                switch (intent)
+                {
 
-                case "l-ddk-greeting":
+                    case "l-ddk-greeting":
 
-                    await ProcessGreetingAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+                        await ProcessGreetingAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
 
-                    break;
+                        break;
 
-                case "l-ddk-calendar":
+                    case "l-ddk-bye":
 
-                    await ProcessCalendarAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+                        await ProcessByeAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
 
-                    break;
+                        break;
 
-                case "l-ddk-contact":
+                    case "l-ddk-thanks":
 
-                    await ProcessContactAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+                        await ProcessThanksAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
 
-                    break;
+                        break;                                                
 
-                case "q_ddk-knowledge":
+                    case "l-ddk-calendar":
 
-                    await ProcessDDKQnAAsync(turnContext, cancellationToken);
+                        await ProcessCalendarAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
 
-                    break;
+                        break;
 
-                default:
+                    case "l-ddk-contact":
 
-                    _logger.LogInformation($"Dispatch unrecognized intent: {intent}.");
+                        await ProcessContactAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
 
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Dispatch unrecognized intent: {intent}."), cancellationToken);
+                        break;
 
-                    break;
+                    case "q_ddk-knowledge":
 
+                        await ProcessDDKQnAAsync(turnContext, cancellationToken);
+
+                        break;
+
+                    default:
+
+                        _logger.LogInformation($"Dispatch unrecognized intent: {intent}.");
+
+                        await turnContext.SendActivityAsync(MessageFactory.Text($"Dispatch unrecognized intent: {intent}."), cancellationToken);
+
+                        break;
+
+                }
             }
 
         }
@@ -148,6 +171,7 @@ namespace Microsoft.BotBuilderSamples
 
                             // Set the flag to true, so we don't prompt in the next turn.
                             conversationData.PromptedUserForName = true;
+                            
                         }
                     }
                     else
@@ -165,7 +189,43 @@ namespace Microsoft.BotBuilderSamples
 
         }
 
+        private async Task ProcessThanksAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("ProcessThanksAsync");
 
+            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
+            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());        
+
+            // Acknowledge that we got their name.
+            await turnContext.SendActivityAsync($"Your Welcome {userProfile.Name}.");
+
+            // Reset the flag to allow the bot to go through the cycle again.
+            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
+            var localMessageTime = messageTimeOffset.ToLocalTime();
+            conversationData.Timestamp = localMessageTime.ToString();
+            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();                    
+        }
+
+        private async Task ProcessByeAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("ProcessByeAsync");
+
+            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
+            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());        
+
+            // Acknowledge that we got their name.
+            await turnContext.SendActivityAsync($"Goodbye {userProfile.Name}. Good chatting!");
+
+            // Reset the flag to allow the bot to go through the cycle again.
+            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
+            var localMessageTime = messageTimeOffset.ToLocalTime();
+            conversationData.Timestamp = localMessageTime.ToString();
+            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();                    
+        }
 
         private async Task ProcessCalendarAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
 
@@ -197,11 +257,11 @@ namespace Microsoft.BotBuilderSamples
 private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
 
         {
+            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
+            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
+            
             _logger.LogInformation("Running dialog with Message Activity.");
-
-
-            // Retrieve LUIS results for Contact.
-            await turnContext.SendActivityAsync(MessageFactory.Text($"ProcessContact entities were found in the message"), cancellationToken);
+            conversationData.InContactDialog = true ;
 
             // Run the Dialog with the new message Activity.
             await _userProfileDialog.RunAsync(turnContext, _conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);

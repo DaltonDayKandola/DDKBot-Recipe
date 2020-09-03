@@ -19,14 +19,15 @@ namespace Microsoft.BotBuilderSamples
 
 
         // The ID of the user's channel.
-
         public string ChannelId { get; set; }
 
 
 
         // Track whether we have already asked the user's name
-
         public bool PromptedUserForName { get; set; } = false;
+
+        // Track whether we have already asked the user's name
+        public bool InContactDialog { get; set; } = false;
 
     }
 
