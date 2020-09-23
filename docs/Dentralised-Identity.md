@@ -11,19 +11,19 @@ Well, you think of it as;
 **Your identity > app(username, password)**
 
 repeated for every service you want to use.  
-and thats it.
+and that's it.
 
 However, your identity is so much more than that.   
-Its about you and your achievements, your interests, you at work, your avatar at play, citizenship, purchases, browsing history, what you buy, what you wear, who you have loved nd who you have lost.  
+Its about you and your achievements, your interests, you at work, your avatar at play, citizenship, purchases, browsing history, what you buy, what you wear, who you have loved and who you have lost.  
 How much of that identity is under your control in the digital world?  
-How much of that information to you want circulating, unchecked, amongst these anonymous thrid parties?
+How much of that information do you want circulating, unchecked, amongst these anonymous third parties?
 
-Your identity is valuable and should be under your control because none of the information that defines you is required by the services you use. Only the proof that what you claim to be is true.  
+Your identity is valuable and should be under your control, because, actually, none of the information that defines you is required by the services you use. Only the proof that what you claim to be is true.  
 
 This is where Decentralised Identity comes in.
 
-* It’s a way of removing the need to store your identity and personal information in information silos across the internet, that you have no control of.  
-It's about taking back Ownership and control of you identity.
+* It’s a way of removing the need to store your identity and personal information in identity silos across the internet, that you have no control of.  
+It's about taking back ownership and control of you identity.
 
 * Its a way of removing the risk that your personal information will end up in the wrong hands.  
 It’s about only providing verifiable proof of your identity not the identity data itself.
@@ -40,7 +40,7 @@ There great principles but what tangibly is Decentralised Identity? Its;
     * Uses a distributed network that provides the immutable proof to claims your making about your identity.
     * Provides a Personal Identity Hub to store and manage your identity data.
 
-Vision and principles are great for stirring up emotions but its these products that we are interested in so lets describe how they work.
+Vision and principles are great for stirring up emotions but its these products that we are interested in, so lets describe further how they work.
 
 ## How does it Work?
 
@@ -48,12 +48,15 @@ Vision and principles are great for stirring up emotions but its these products 
 #### Introducing terms: Subject, Claims, Decentralised Identity, Verifiable Credentials, Verifiable Presentations
 
 **TL;DR**  
-In this section, we will look at how we identify you from the billions in the digital world using your unique identifier, how you represent and structure your identity in the form of claims and verifiable credentials, how finally how you present that to the service you want to use with the help of verifiable presentations.
+In this section, we will look at how;
+* we identify you from the billions in the digital world using your unique identifier.
+* you represent and structure your identity in the form of claims and Verifiable Credentials.
+* you present that to the service you want to use with the help of Verifiable Presentations.
 
 **Identifier**  
 Identity is described by an *Identifier*, a Globally unique string that can pin point you amongst the billions and the *Data*, your personal information, achievements, interests, citizenship etc. The crux of your identity.
 
-The *Identifier* is a globally unique ID that represents  you but can also represnt anything that needs to be identified. i.e an organisation or a service. You, the organisation, a service etc is collectively known as a subject.
+The *Identifier* is a globally unique ID that represents  you but can also represent anything that needs to be identified. i.e an organisation or a service. You, the organisation, a service etc is collectively known as a **Subject**.
 
 Its global uniqueness is achieved not by the concept of a GUID, i.e a globally unique number that no one else has, but by following the structure of a namespace.
 
@@ -67,7 +70,7 @@ The Method for a Decentralised identity (DID) is the mechanism by which an ident
 The string is unique for that method.
 
 **Claims**  
-Information that makes up your identity is ultimately used (remember, in the form of proof, not the information itself) to authorise access to something that you wnat to use. Which is where claims comes in.  
+Information that makes up your identity is ultimately used (remember, in the form of proof, not the information itself) to authorise access to something that you want to use. Which is where claims comes in.  
 Claims has, over the years, been used in many forms of identity management and claims based applications to provide the authorisation to use a service.  
 
 They are simply statements about a user.   
@@ -90,16 +93,17 @@ The credential and proof graphs, working together, is know as [Verifiable Creden
 ![Credential and Proof Graphs](images/credential-graph.png "Credential and Proof Graphs")
 
 So, in the example above, Pat claims that she use to go to an Example University. This forms the **Credential Graph** for this claim.     
-The Example University will be the only authority that can prove that claim. They are the Issuer of the identity data and provide the proof, using a mechanism defined in the Proof Graph.
+The Example University will be the only authority that can prove that claim. They are the Issuer of the identity data and provide the proof, using a mechanism defined in the **Proof Graph**.  
+All of it is know as the **Verifiable Credential**.
 
 **Verifiable Presentations**  
-When we present our Credential Graph to a service to seek authorisation to use it we only want to present the least amount of information to get access.  
+When we present our **Verifiable Credential** to a service to seek authorisation to use it we only want to present the least amount of information to get access.  
 For example, a person going into a bar only needs to prove he or she is 18. Their name, address and even date of birth is irrelevant to the information required by the service (in this case the bar service). Which is only whether they are 18 or over.  
-Expressing only the portions of our Credential Graph that is appropriate to a given situation is known as [Verifiable Presentations][4].
+Expressing only the portions of our **Verifiable Credential** that is appropriate to a given situation is known as [Verifiable Presentations][4].
 
 ![Presentation, Credential and Proof Graphs](images/graphs.png "Presentation, Credential and Proof Graphs")
 
-So, in the example above, Pats claim of attending the Example University is verified by the University, but the only information Pat wishes to present to any service that requires proof of attendance is a simple Yes or No, to the question. The proof that Pat is telling the truth is validated through the Proof Graph.  
+So, in the example above, Pats claim of attending the Example University is verified by the University, but the only information Pat wishes to present to any service that requires proof of attendance is a simple Yes or No, to the question. The proof that Pat is telling the truth is validated through the **Proof Graph**.  
 No names, date of birth or any other personal identifiable information that would be subsequently stored in the services siloed repository!
 
 ### The network that provides the proof
@@ -111,7 +115,7 @@ The network that provides the immutable proof to our claims in our **Credential 
 Without going into the details on how block chains work, because I cant, its purpose  is to to provide a distributed and immutable record of proof to my claims. And it does this without relying on one single authority. This means that data cannot be modified and is independently verifiable.  
 It can be trusted. Trust me. 
 
-Actually, don't trust me trust the Block Chain because, if my claim that I went to a university is digitally signed by the university and is recorded on the ledger, we are pretty confident that the claim is true.
+Actually, don't trust me, trust the Block Chain because, if my claim that I went to a university is digitally signed by the university and is recorded on the ledger, we are pretty confident that the claim is true.
 
 Issuers of identity data, such as the university that educated Pat and issued her degree certificate will provide the digital signature to her claim that she attended the university and got the degree. This is then recorded within the ledger on the block chain for everyone to see when they need to verify her claim when deciding whether to  authorise her request for a service.
 
@@ -146,7 +150,6 @@ US 2017
 **Microsoft**  
 https://didproject.azurewebsites.net/docs/overview.html
 
-
 **IBM**  
 https://www.ibm.com/blockchain/solutions/identity
 
@@ -157,7 +160,7 @@ https://www.metadium.com/
 A Blockchain Ledger Platform 
 
 ## Are there any alternatives
-Well, not really to the principles defining Decentralised Identity. The point is to converge onto open standards defined by W3C and DIG so alternatives would be counter productive.
+Well, not really to the principles defining Decentralised Identity. The point is to converge onto open standards defined by W3C and DID so alternatives would be counter productive.
 
 There are different companies involved in shaping these standards and also producing products based on the standards, as listed the previous section.
 
@@ -168,9 +171,7 @@ The latter allowed identity, owned by organisations, to trust each other so you 
 Facebook provided a user centric approach to identity management, which was successful but required Facebook to own you credentials and personal information.
 
 ## Demo
-The  credential issuer capabilities in Azure AD allow you to issue your own Verifiable Credentials.
-
-<Demo to follow>
+The  credential issuer capabilities in [Azure AD][5] allow you to issue your own Verifiable Credentials.
 
 ## Where can I find more information?
 
@@ -183,6 +184,6 @@ The  credential issuer capabilities in Azure AD allow you to issue your own Veri
 
 [1]: http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html "Self Sovereign Identity"
 [2]: https://www.w3.org/TR/did-core/ "W3C Decentralised Identifiers"
-[3]: https://identity.foundation/ "Decentralised Idenrity Foundation (DIF)"
+[3]: https://identity.foundation/ "Decentralised Identity Foundation (DIF)"
 [4]: https://medium.com/metadium/decentralized-identifiers-verifiable-credentials-and-presentations-the-easy-guide-4397ac2a4b3e "Decentralized Identifiers: Verifiable Credentials and Presentations, the easy guide"
 [5]: https://didproject.azurewebsites.net/docs/overview.html "Introducing Verifiable Credentials as a Service by Azure AD"
