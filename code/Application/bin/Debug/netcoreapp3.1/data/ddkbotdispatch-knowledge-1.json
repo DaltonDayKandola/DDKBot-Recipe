@@ -1,0 +1,171 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "l-ddk-calendar"
+    },
+    {
+      "name": "l-ddk-greeting"
+    },
+    {
+      "name": "q_ddk-knowledge"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Calendar.EndDate",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "EndDate"
+      },
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Calendar.EndTime",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "EndTime"
+      },
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Calendar.Message",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "Message"
+      },
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Calendar.StartDate",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "StartDate"
+      },
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Calendar.StartTime",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "StartTime"
+      },
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Calendar.Subject",
+      "children": [],
+      "inherits": {
+        "domain_name": "Calendar",
+        "model_name": "Subject"
+      },
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [
+    {
+      "name": "personName",
+      "roles": []
+    }
+  ],
+  "utterances": [],
+  "versionId": "Dispatch",
+  "name": "ddkbotdispatch-knowledge-1",
+  "desc": "Dispatch model for ddkbotdispatch-knowledge-1",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "^is (this|the|that) (meeting|conference) room (available|booked) [(at|on|for)] [{Calendar.StartDate}] [(at|on|for)] [{Calendar.StartTime}]^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^[(show|display)] next [page] [please]^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^how long do i have (until|before|till) the [next] (meeting|appointment|{Calendar.Subject})",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^do i have time (at|on|for) {Calendar.StartTime} [on] {Calendar.StartDate}",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^does {personName} have time at {Calendar.StartTime}",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^is {personName} (available|free) from {Calendar.StartTime} to {Calendar.EndTime} [on {Calendar.StartDate}]",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^i (want to|need to|would like to) (attend|join) {Calendar.Subject}, [please] add it.^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^(remind|inform|tell) (the|all) attendees {Calendar.Message}^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "(create|book|schedule) (a|an) (meeting|appointment|event) [with {personName}] between {Calendar.StartTime} and {Calendar.EndTime}",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "(create|book|schedule) (a|an) (meeting|appointment|event) [with {personName}] from [{Calendar.StartDate}] {Calendar.StartTime} to [{Calendar.EndDate}] {Calendar.EndTime}",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^i (want to|would like to|'d like to) (join|attend) the {Calendar.Subject}^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^(clear|delete|remove) (my|the) calendar from {Calendar.StartTime} to {Calendar.EndTime}^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^(remove|cancel|delete) (the|my) {Calendar.Subject} [at {Calendar.StartTime}] [{Calendar.StartDate}]^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^[(would|can|could) you] [please] (change|reschedule) [the] ({Calendar.Subject}|meeting) to {Calendar.StartTime}^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "^i ('d|would like to|want to) join the ({Calendar.Subject}|meeting) now^",
+      "intent": "l-ddk-calendar"
+    },
+    {
+      "pattern": "(create|book|schedule) (a|an) (meeting|appointment|event) [with {personName}] (at|for|on) [{Calendar.StartDate}] [{Calendar.StartTime}]",
+      "intent": "l-ddk-calendar"
+    }
+  ],
+  "settings": [
+    {
+      "name": "NormalizeDiacritics",
+      "value": "true"
+    },
+    {
+      "name": "UseAllTrainingData",
+      "value": "true"
+    }
+  ]
+}

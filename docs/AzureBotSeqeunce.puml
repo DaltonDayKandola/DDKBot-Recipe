@@ -1,0 +1,83 @@
+@startuml
+' Sequence Model for
+
+!define ANOTHER_DATE %date[yyyy.MM.dd 'at' HH:mm]%
+Title SES Engineering Blueprint Sequence Diagram\nGenerated %date% or ANOTHER_DATE
+
+
+
+' Definition of the Actors
+actor "Project Manager" as PM
+actor "Product Center\nEngineer" as PCE
+actor "Test Engineer" as TE
+actor "OneIT Service\nManagement\nEngineer(s)" as SM
+actor "Business User" as BU
+
+participant "Developer\nWorkstation" as DW
+participant "Collaboration &\nDesign" as CD
+participant "Binary &\nRepository" as BR
+participant "Source Code\nRepository" as SC
+participant "Continuous \nIntegration and\nDeployment" as CICD
+participant "Platform\nManagement" as PltMan
+participant "Observability" as O
+participant "Routing &\nDiscovery" as RD
+participant "Integration" as RD
+participant "Content Delivery" as ContDel
+participant "Servers"
+participant "Integration" as I
+participant "Identity &\nAccessanManagement" as IdM
+participant "Routing &\nDiscovery" as RD
+participant "Observability" as O
+participant "Infrastructure\nServices" as IS
+participant "Floss" as F
+
+
+group Infrastructure Platforms
+  PCE -> DW : Develop Code.\nUse Tools.
+  PCE -> CD : Issue Tracking.\nDocument Collaboration.
+End
+
+group Plan, Code, Build, Test, Deploy
+
+ PM -> CD : Plan.\nChat.\nTasking.\nDocumentation.\nCollaboration.
+
+ DW -> BR : Pull Artefacts
+ DW -> CICD : Manage Pipeline
+ CICD -> BR : Pull Containers
+ 
+ PltMan -> DW: Create/Destroy/Configure\nWorkstation\nand Application(s)
+ DW -> PltMan: Create/Destroy/Configure\nWorkstation\nand Application(s)
+ SC -> CICD: Code
+ SC -> PltMan: IAC Config
+ PltMan -> Servers: Create/Destroy/Configure\nWorkstations and Applications
+ Servers -> BR: Pull Artefacts
+
+ TE -> "QA & test\nTooling" as QA: Test Management
+ TE -> CD : Issue tracking.\nDocumentation.\nCollaboration.
+
+End
+
+group Infrastructure Services as InfraS
+   
+   SM -> IS : Provision infrastucture networks services, accounts
+   SM -> PltMan : Provision Infrastructure
+   BR -> F : Retrieve 3rd Party Software and packages
+      
+End
+
+group "Operate and Monitor" as OM
+   
+   BU -> Servers : User Request
+   Servers -> BU : Computer Response
+   ContDel -> Servers: Content
+   Servers -> BR: Pull Artefacts
+    I -> ContDel: Event Messaging
+    RD -> I: Logging
+    RD -> ContDel: Request/Response
+'    OM -> IdM: Authenticate\nand Authorise
+'    OM -> O: Logs\nand\nAlerts
+'    InfraS -> O: Logs\nand\nAlerts
+'    PCBTD -> O: Logs\nand\nAlerts
+   
+End
+@enduml
