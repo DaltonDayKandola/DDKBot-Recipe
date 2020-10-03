@@ -4,9 +4,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Azure.Blobs;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 
 namespace Microsoft.BotBuilderSamples
 {
@@ -20,23 +22,27 @@ namespace Microsoft.BotBuilderSamples
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
 
+             BlobsStorage storage = new BlobsStorage ("DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey=qFthYCZS3k7az6QT45icLON0CVTF2G8NpjNVRe+04V2+6kZ2wpKgAKbLFQeVPjS1CIWnTemXiic8rVK8LHm/zw==;EndpointSuffix=core.windows.net", "ddkcontainer01");
+
             // Create the bot services (LUIS, QnA) as a singleton.
             services.AddSingleton<IBotServices, BotServices>();
             
-            // Create the storage we'll be using for User and Conversation state. (Memory is great for testing purposes.)
-            services.AddSingleton<IStorage, MemoryStorage>();
 
-            // Create the User state. (Used in this bots Dialog implementation.)
-            services.AddSingleton<UserState>();
+            // Create the User state passing in the storage layer.
+            var userState = new UserState(storage);
+            services.AddSingleton(userState);
 
-            // Create the Conversation state. (Used by the Dialog system itself.)
-            services.AddSingleton<ConversationState>();
+              // Create the Conversation state passing in the storage layer.
+            var conversationState = new ConversationState(storage);
+            services.AddSingleton(conversationState);
 
             // The Dialog that will be run by the bot.
             services.AddSingleton<UserProfileDialog>();
             
             // Create the bot as a transient.
             services.AddTransient<IBot, DispatchBot>();
+
+
 
         }
 

@@ -16,6 +16,8 @@ namespace Microsoft.BotBuilderSamples
         public string ContactValue { get; set; }
         public bool ContactDialogueFlow { get; set; }
 
+        
+
     }
 
 }

@@ -13,11 +13,14 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
 using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.Azure.Blobs;
 
 namespace Microsoft.BotBuilderSamples
 {
     public class DispatchBot : ActivityHandler
     {
+
+        private readonly BlobsTranscriptStore _myTranscripts = new BlobsTranscriptStore("DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey=qFthYCZS3k7az6QT45icLON0CVTF2G8NpjNVRe+04V2+6kZ2wpKgAKbLFQeVPjS1CIWnTemXiic8rVK8LHm/zw==;EndpointSuffix=core.windows.net", "ddkcontainer02");
 
         private readonly ILogger<DispatchBot> _logger;
         private readonly IBotServices _botServices;
@@ -42,14 +45,20 @@ namespace Microsoft.BotBuilderSamples
         {
              await base.OnTurnAsync(turnContext, cancellationToken);
 
+
            //  Save any state changes that might have occurred during the turn.
+           //  So this saves state at every turn which means you will see the evolution of the 
+           //  conversation in the sotrage blob. This may be a good ro bad thing. Im not sure. 
+           //  Maybe we want to only store complete questions and answers int he storage blob and the evolution of the conversation in memory storage
+
             await _conversationState.SaveChangesAsync(turnContext, false, cancellationToken);
             await _userState.SaveChangesAsync(turnContext, false, cancellationToken);
         }
         
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
-
+            await _myTranscripts.LogActivityAsync(turnContext.Activity);
+           
             // First, we use the dispatch model to determine which cognitive service (LUIS or QnA) to use.
             var recognizerResult = await _botServices.Dispatch.RecognizeAsync(turnContext, cancellationToken);
         
@@ -58,18 +67,22 @@ namespace Microsoft.BotBuilderSamples
         
             // Next, we call the dispatcher with the top intent.
             await DispatchToTopIntentAsync(turnContext, topIntent.intent, recognizerResult, cancellationToken);
-                        
+
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             const string WelcomeText = "How can I help you today?";
+            const string GDPR = "Please be aware that the DDK Bot does record this conversation.\r\nWe only use this data to improve the Bots conversation accuracy and to contact you if you requested.\r\nWe will never pass this data onto any 3rd Party.\r\nFurther details on DDK Privacy can be found on our web site.";
 
             foreach (var member in membersAdded)
             {
                 if (member.Id != turnContext.Activity.Recipient.Id)
                 {
-                    await turnContext.SendActivityAsync(MessageFactory.Text($"Welcome to DDK bot services {member.Name}. {WelcomeText}"), cancellationToken);
+                    
+                    await turnContext.SendActivityAsync($"Welcome to our DDK Bot! {WelcomeText}"); 
+                    await turnContext.SendActivityAsync(MessageFactory.Text(GDPR), cancellationToken);
+                    
                 }
             }
         }
@@ -160,8 +173,12 @@ namespace Microsoft.BotBuilderSamples
                             await turnContext.SendActivityAsync($"Thanks. Nice to meet you {userProfile.Name}. How can I help you?");
 
                             // Reset the flag to allow the bot to go through the cycle again.
-                        // conversationData.PromptedUserForName = false;
-
+                             conversationData.PromptedUserForName = false;
+                            // Record the Conversation for log and GDPR
+                            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
+                            var localMessageTime = messageTimeOffset.ToLocalTime();
+                            conversationData.Timestamp = localMessageTime.ToString();
+                            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();     
 
                         }
                         else
@@ -171,60 +188,54 @@ namespace Microsoft.BotBuilderSamples
 
                             // Set the flag to true, so we don't prompt in the next turn.
                             conversationData.PromptedUserForName = true;
+
+                            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
+                            var localMessageTime = messageTimeOffset.ToLocalTime();
+                            conversationData.Timestamp = localMessageTime.ToString();
+                            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();     
+
                             
                         }
                     }
                     else
                     {
-                        // Add message details to the conversation data.
-                        // Convert saved Timestamp to local DateTimeOffset, then to string for display.
-                        var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
-                        var localMessageTime = messageTimeOffset.ToLocalTime();
-                        conversationData.Timestamp = localMessageTime.ToString();
-                        conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();
-
                         // Display state data.
-                        await turnContext.SendActivityAsync($"Hello again {userProfile.Name}. How can I help you?");                       
+                            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
+                            var localMessageTime = messageTimeOffset.ToLocalTime();
+                            conversationData.Timestamp = localMessageTime.ToString();
+                            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();     
+
+
+                        await turnContext.SendActivityAsync($"Hello again {userProfile.Name}. How can I help you?");   
+
                     }
+
+            
 
         }
 
         private async Task ProcessThanksAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
         {
             _logger.LogInformation("ProcessThanksAsync");
-
-            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
-            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
             var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
-            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());        
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
 
             // Acknowledge that we got their name.
             await turnContext.SendActivityAsync($"Your Welcome {userProfile.Name}.");
 
-            // Reset the flag to allow the bot to go through the cycle again.
-            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
-            var localMessageTime = messageTimeOffset.ToLocalTime();
-            conversationData.Timestamp = localMessageTime.ToString();
-            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();                    
+
+
         }
 
         private async Task ProcessByeAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
         {
             _logger.LogInformation("ProcessByeAsync");
-
-            var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
-            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
             var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
-            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());        
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
 
             // Acknowledge that we got their name.
             await turnContext.SendActivityAsync($"Goodbye {userProfile.Name}. Good chatting!");
 
-            // Reset the flag to allow the bot to go through the cycle again.
-            var messageTimeOffset = (DateTimeOffset) turnContext.Activity.Timestamp;
-            var localMessageTime = messageTimeOffset.ToLocalTime();
-            conversationData.Timestamp = localMessageTime.ToString();
-            conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();                    
         }
 
         private async Task ProcessCalendarAsync(ITurnContext<IMessageActivity> turnContext, LuisResult luisResult, CancellationToken cancellationToken)
@@ -273,10 +284,9 @@ private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContex
 
         {
 
+            _logger.LogInformation("ProcessDDKQnAAsync");
             var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
             var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
-
-            _logger.LogInformation("ProcessDDKQnAAsync");
 
             var results = await _botServices.DDKQnA.GetAnswersAsync(turnContext);
 
