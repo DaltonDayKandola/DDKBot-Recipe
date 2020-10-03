@@ -48,10 +48,9 @@ jobs:
     - name: 'dotnet build and publish'
       run: |
         pwd
-        ls
-        cd .\code\Application
+        cd '${{ env.CODE_PACKAGE_PATH }}'
         dotnet restore
-        dotnet build --source --configuration Release
+        dotnet build --configuration Release
         dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}' 
       
     #  Deploy to Azure Web apps
