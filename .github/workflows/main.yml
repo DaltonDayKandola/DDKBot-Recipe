@@ -18,8 +18,9 @@ on:
 env:
 
   AZURE_WEBAPP_NAME: ddkbot-webapp-1    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: './code/Application'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '3.1.x'           # set this to the dot net version to use
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  CODE_PACKAGE_PATH: './Code/Application'              # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '3.1.x'             # set this to the dot net version to use
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
@@ -33,7 +34,7 @@ jobs:
     # checkout the repo
     - name: 'Checkout GitHub Action' 
       uses: actions/checkout@master
-      
+    - run: cd $CODE_PACKAGE_PATH
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.DDK_BOT_AZURE_CREDENTIALS }}
