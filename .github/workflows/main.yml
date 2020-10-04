@@ -34,8 +34,6 @@ jobs:
     # checkout the repo
     - name: 'Checkout GitHub Action' 
       uses: actions/checkout@master
-      with: 
-        repository: code/Application
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.DDK_BOT_AZURE_CREDENTIALS }}
@@ -48,6 +46,7 @@ jobs:
 
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
+      working-directory: ${{ env.CODE_PACKAGE_PATH }}
       run: |        
         dotnet restore
         dotnet build --configuration Release
