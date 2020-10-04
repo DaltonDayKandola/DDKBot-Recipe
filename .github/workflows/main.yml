@@ -46,7 +46,7 @@ jobs:
 
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
-      working-directory: '${{ CODE_PACKAGE_PATH }}'
+      working-directory: '${{ env.CODE_PACKAGE_PATH }}'
       run: |      
         dotnet restore
         dotnet build --configuration Release
