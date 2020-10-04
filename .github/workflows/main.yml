@@ -44,9 +44,13 @@ jobs:
       with:
         dotnet-version: '${{ env.DOTNET_VERSION }}'
 
+    # do some prep command
+    - name: 'prep'
+      run: |
+        cd .\code
+        
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
-      working-directory: '${{ env.CODE_PACKAGE_PATH }}'
       run: |      
         dotnet restore
         dotnet build --configuration Release
