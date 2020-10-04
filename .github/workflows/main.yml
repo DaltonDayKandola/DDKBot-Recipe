@@ -50,6 +50,7 @@ jobs:
         pwd
         ls
         cd code
+        cd application
         
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
