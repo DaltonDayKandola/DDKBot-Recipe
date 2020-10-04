@@ -47,7 +47,9 @@ jobs:
     # do some prep command
     - name: 'prep'
       run: |
-        cd .\code
+        pwd
+        ls
+        cd code
         
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
