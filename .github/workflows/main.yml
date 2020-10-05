@@ -49,7 +49,7 @@ jobs:
       run: |
         cd code
         cd Application
-        cd pwd
+        pwd
         
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
