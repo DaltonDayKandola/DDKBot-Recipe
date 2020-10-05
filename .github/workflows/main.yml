@@ -45,19 +45,14 @@ jobs:
         dotnet-version: '${{ env.DOTNET_VERSION }}'
 
     # do some prep command
-    - name: 'prep'
+    - name: 'prep, dotnet build and publish'
       run: |
         cd code
         cd Application
         pwd
-        dotnet build --configuration Release
-        
-   # Run dotnet build and publish
-    - name: 'dotnet build and publish'
-      run: |      
         dotnet restore
         dotnet build --configuration Release
-        dotnet publish -c Release -o '.' 
+        dotnet publish -c Release -o '.'       
       
     #  Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
