@@ -47,10 +47,9 @@ jobs:
     # do some prep command
     - name: 'prep'
       run: |
-        pwd
-        ls
         cd code
         cd Application
+        cd pwd
         
    # Run dotnet build and publish
     - name: 'dotnet build and publish'
