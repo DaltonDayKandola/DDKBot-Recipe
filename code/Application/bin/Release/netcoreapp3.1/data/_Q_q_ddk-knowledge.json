@@ -1,0 +1,82 @@
+{
+  "qnaDocuments": [
+    {
+      "id": 4,
+      "answer": "Our contact details:\n\n01162 375557\n\n[us@meandhimdesign.co.uk](mailto:us@meandhimdesign.co.uk)\n\nThe Giraffe House\n\nBurrough Court\n\nBurrough on the Hill\n\nLeicestershire",
+      "source": "https://www.meandhimdesign.co.uk/contact/",
+      "questions": [
+        "contact"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 5,
+      "answer": "Our Clients are:\n\nArvon Foundation, Aardman Animations, Autoglym, Beach Horizon, Cambridge University Press, Condé Nast, Design Museum, Edwin Coe, Girls Day School Trust, Kilworth House Hotel & Theatre, LEGO, Lexus Financial Services, Lintbells, The Endowed Schools, Loughborough University, Roehampton University, RM Education, Siemens, Sydenham High School & Toyota Financial Services.",
+      "source": "Editorial",
+      "questions": [
+        "who are your clients",
+        "who have you worked for",
+        "customers",
+        "clients"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 6,
+      "answer": "Our home is :\nThe Giraffe House Burrough Court Burrough on the Hill Leicestershire LE14 2QS(Yes, it used to have Giraffes in it)",
+      "source": "Editorial",
+      "questions": [
+        "where are you",
+        "address",
+        "office",
+        "location"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 7,
+      "answer": "Our sole aim is to make DDK look great.😎",
+      "source": "Editorial",
+      "questions": [
+        "what do you do",
+        "whats your business",
+        "who are you"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 8,
+      "answer": "Our birthday is",
+      "source": "Editorial",
+      "questions": [
+        "when did you start"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    }
+  ]
+}
