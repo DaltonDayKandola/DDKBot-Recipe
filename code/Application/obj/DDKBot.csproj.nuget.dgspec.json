@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj": {}
+    "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj": {}
   },
   "projects": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj": {
+    "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+        "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj",
         "projectName": "DDKBot",
-        "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+        "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj",
         "packagesPath": "C:\\Users\\williamdalton\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\obj\\",
+        "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\williamdalton\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Microsoft.Azure.KeyVault.Core": {
+              "target": "Package",
+              "version": "[3.0.5, )"
             },
             "Microsoft.Bot.Builder": {
               "target": "Package",
