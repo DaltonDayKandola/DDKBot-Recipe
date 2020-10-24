@@ -34,9 +34,6 @@ jobs:
     # checkout the repo
     - name: 'Checkout GitHub Action' 
       uses: actions/checkout@master
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.DDK_BOT_AZURE_CREDENTIALS }}
 
     # Runs a single command using the runners shell
     - name: 'Setup Dotnet ${{ env.DOTNET_VERSION }}'
