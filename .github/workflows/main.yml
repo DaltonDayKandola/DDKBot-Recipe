@@ -38,8 +38,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: 'Setup Dotnet ${{ env.DOTNET_VERSION }}'
       uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '${{ env.DOTNET_VERSION }}'
 
     # do some prep command. Get to the corrcet directory and then build and publish the .net app
     - name: 'prep, dotnet build and publish'
