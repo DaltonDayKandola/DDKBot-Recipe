@@ -17,12 +17,16 @@ namespace Microsoft.BotBuilderSamples
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            
+
+
             services.AddControllers().AddNewtonsoftJson();
 
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
 
-             BlobsStorage storage = new BlobsStorage ("DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey=qFthYCZS3k7az6QT45icLON0CVTF2G8NpjNVRe+04V2+6kZ2wpKgAKbLFQeVPjS1CIWnTemXiic8rVK8LHm/zw==;EndpointSuffix=core.windows.net", "ddkcontainer01");
+             BlobsStorage storage = new BlobsStorage ($"DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey={new getmysecret().KeyVaultsecretName("StorageBlobKey").ToString()};EndpointSuffix=core.windows.net", "ddkcontainer01");
 
             // Create the bot services (LUIS, QnA) as a singleton.
             services.AddSingleton<IBotServices, BotServices>();

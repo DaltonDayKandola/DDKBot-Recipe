@@ -187,3 +187,9 @@ D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\bin\Debug\netcoreapp3.
 D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Bot.Builder.Azure.Blobs.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\web.config
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Keys.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
