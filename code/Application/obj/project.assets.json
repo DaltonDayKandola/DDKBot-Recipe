@@ -237,13 +237,19 @@
           }
         }
       },
-      "Microsoft.Azure.KeyVault.Core/1.0.0": {
+      "Microsoft.Azure.KeyVault.Core/3.0.5": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "[2.3.20, 3.0.0)",
+          "Microsoft.Rest.ClientRuntime.Azure": "[3.3.18, 4.0.0)",
+          "Newtonsoft.Json": "10.0.3",
+          "System.Net.Http": "4.3.4"
+        },
         "compile": {
-          "lib/net40/Microsoft.Azure.KeyVault.Core.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.Core.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.Azure.KeyVault.Core.dll": {}
+          "lib/netstandard2.0/Microsoft.Azure.KeyVault.Core.dll": {}
         }
       },
       "Microsoft.Azure.Storage.Blob/9.4.2": {
@@ -3020,19 +3026,20 @@
         "runtimes/win7-x64/native/Microsoft.Azure.Documents.ServiceInterop.dll"
       ]
     },
-    "Microsoft.Azure.KeyVault.Core/1.0.0": {
-      "sha512": "iaA0E8xoVlqroQ7Iurg/VyAjfPdhzn+xN7JkdncmNoox/ez49uPbxp2vMrvhopBaUMuoBu38+8e0RvrV+X+BxA==",
+    "Microsoft.Azure.KeyVault.Core/3.0.5": {
+      "sha512": "1ioUo6vofXu803Fk4WZNCRC0iXy17s2tI4XWvfAS0tIDYZc7BLXo/S36t+JE36WTb89nuc4KevUiAtIDzKiwtA==",
       "type": "package",
-      "path": "microsoft.azure.keyvault.core/1.0.0",
+      "path": "microsoft.azure.keyvault.core/3.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net40/Microsoft.Azure.KeyVault.Core.dll",
-        "lib/net40/Microsoft.Azure.KeyVault.Core.xml",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.KeyVault.Core.dll",
-        "lib/portable-net45+wp8+wpa81+win/Microsoft.Azure.KeyVault.Core.xml",
-        "microsoft.azure.keyvault.core.1.0.0.nupkg.sha512",
-        "microsoft.azure.keyvault.core.nuspec"
+        "lib/net452/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/net461/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/netstandard1.4/Microsoft.Azure.KeyVault.Core.dll",
+        "lib/netstandard2.0/Microsoft.Azure.KeyVault.Core.dll",
+        "microsoft.azure.keyvault.core.3.0.5.nupkg.sha512",
+        "microsoft.azure.keyvault.core.nuspec",
+        "pkgicon.png"
       ]
     },
     "Microsoft.Azure.Storage.Blob/9.4.2": {
@@ -8953,6 +8960,7 @@
       "Azure.Security.KeyVault.Keys >= 4.1.0",
       "Azure.Security.KeyVault.Secrets >= 4.1.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.1",
+      "Microsoft.Azure.KeyVault.Core >= 3.0.5",
       "Microsoft.Bot.Builder >= 4.10.3",
       "Microsoft.Bot.Builder.AI.Luis >= 4.10.3",
       "Microsoft.Bot.Builder.AI.QnA >= 4.10.3",
@@ -8967,11 +8975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+      "projectUniqueName": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
       "projectName": "DDKBot",
-      "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+      "projectPath": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
       "packagesPath": "C:\\Users\\williamdalton\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\obj\\",
+      "outputPath": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\williamdalton\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9013,6 +9021,10 @@
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "Microsoft.Azure.KeyVault.Core": {
+            "target": "Package",
+            "version": "[3.0.5, )"
           },
           "Microsoft.Bot.Builder": {
             "target": "Package",
@@ -9060,17 +9072,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Azure.KeyVault.Core 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Azure.KeyVault.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }
