@@ -113,3 +113,9 @@ D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\obj\Release\netcoreapp
 D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\obj\Release\netcoreapp3.1\DDKBot.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\obj\Release\netcoreapp3.1\DDKBot.pdb
 D:\Users\williamdalton\git\DDKBot\DDKBot\code\Application\obj\Release\netcoreapp3.1\DDKBot.genruntimeconfig.cache
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\web.config
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\Azure.Identity.dll
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\Azure.Security.KeyVault.Keys.dll
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Users\williamdalton\git\DDKBot\ddkbot\code\Application\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
