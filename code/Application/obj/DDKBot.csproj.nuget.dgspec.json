@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj": {}
+    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj": {}
   },
   "projects": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj": {
+    "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+        "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
         "projectName": "DDKBot",
-        "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
+        "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
         "packagesPath": "C:\\Users\\williamdalton\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\obj\\",
+        "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\williamdalton\\AppData\\Roaming\\NuGet\\NuGet.Config",
