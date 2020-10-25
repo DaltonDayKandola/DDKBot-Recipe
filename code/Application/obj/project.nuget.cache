@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VoTfeJvLCuh6LPkit5wetemp1QIY5gAulHtr35hxIAYsU1IsYxp88hBE3Zxag6IkvVzltXc2mFF+8k3kUmSXFw==",
+  "dgSpecHash": "qqmc3OC40KX0GUKogsyPuRpPYaHTVHgKSkHACHvusRk2FsekfxOwYAbB/nH7diRKQFs2loBmfXiLXaLyDYvMGw==",
   "success": true,
-  "projectFilePath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
+  "projectFilePath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\williamdalton\\.nuget\\packages\\adaptiveexpressions\\4.10.3\\adaptiveexpressions.4.10.3.nupkg.sha512",
     "C:\\Users\\williamdalton\\.nuget\\packages\\antlr4.runtime\\4.6.6\\antlr4.runtime.4.6.6.nupkg.sha512",
