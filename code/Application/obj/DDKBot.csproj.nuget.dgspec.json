@@ -81,6 +81,10 @@
             "Microsoft.Bot.Builder.Integration.AspNet.Core": {
               "target": "Package",
               "version": "[4.10.3, )"
+            },
+            "Microsoft.Extensions.Configuration.AzureKeyVault": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             }
           },
           "imports": [

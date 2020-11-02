@@ -5,14 +5,12 @@ using System;
 class getmysecret
 {
 
-private const string KeyVaultName = "ddkbot-keyvault";
-
-
   public string KeyVaultsecretName (string secretname)
     {
         // Get keyvault secrets            
-        var kvUri = "https://" + KeyVaultName + ".vault.azure.net";
-        var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
+        // The EnvironmentCredential gets teh client ID and secret key from environmental variables
+        string keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri")).ToString();
+        var client = new SecretClient(new Uri(keyVaultEndpoint), new EnvironmentCredential());
 
         return client.GetSecret(secretname).Value.Value.ToString() ; // field  
 

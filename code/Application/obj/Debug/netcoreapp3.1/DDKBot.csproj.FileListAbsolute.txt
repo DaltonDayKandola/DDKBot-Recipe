@@ -175,3 +175,14 @@ D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Azure.Identity.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Azure.KeyVault.WebKey.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Azure.Services.AppAuthentication.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.AzureKeyVault.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
