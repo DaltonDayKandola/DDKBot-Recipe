@@ -142,7 +142,7 @@ namespace Microsoft.BotBuilderSamples
 
                         _logger.LogInformation($"Dispatch unrecognized intent: {intent}.");
 
-                        await turnContext.SendActivityAsync(MessageFactory.Text($"Dispatch unrecognized intent: {intent}."), cancellationToken);
+                        await turnContext.SendActivityAsync(MessageFactory.Text($"Sorry, I didn't quite understand what you meant. Could you try rephrasing?"), cancellationToken);
 
                         break;
 
