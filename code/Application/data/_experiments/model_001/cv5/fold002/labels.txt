@@ -1,5 +1,3 @@
 Label	LabelName	Samples
-0	l-ddk-calendar	1259
-1	l-ddk-greeting	10
-2	None	7
-3	q_ddk-knowledge	13
+0	l-ddk-greeting	11
+1	q_ddk-knowledge	29

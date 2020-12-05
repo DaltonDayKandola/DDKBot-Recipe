@@ -15,17 +15,7 @@
   "prebuiltEntities": [],
   "utterances": [
     {
-      "text": "wozup",
-      "intent": "l-ddk-greeting",
-      "entities": []
-    },
-    {
       "text": "whats up",
-      "intent": "l-ddk-greeting",
-      "entities": []
-    },
-    {
-      "text": "good morning",
       "intent": "l-ddk-greeting",
       "entities": []
     },
@@ -40,6 +30,31 @@
       "entities": []
     },
     {
+      "text": "good morning",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "are you well",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "wozup",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
       "text": "whatsup",
       "intent": "l-ddk-greeting",
       "entities": []
@@ -50,12 +65,17 @@
       "entities": []
     },
     {
-      "text": "hello",
+      "text": "how are you",
       "intent": "l-ddk-greeting",
       "entities": []
     },
     {
-      "text": "what do you make",
+      "text": "what type of company are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you do project management",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
@@ -65,12 +85,132 @@
       "entities": []
     },
     {
+      "text": "what are your company principles",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who is part of ddk",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what it skills do you provide",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what clients do you have",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what industry credentials do you have",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you have any industry partners",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you an accredited organisation",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what are your company values",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you certified",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what consultancy do you provide",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who do you work for",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what you are",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
       "text": "what do you sell",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
+      "text": "how can you help me",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how much experience do you have",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what it services do you specialise in",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who works for you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
       "text": "what do you do",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what do you make",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are your people trained",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who are your clients",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what you sell",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how many people do you employ",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how big is your company",
       "intent": "q_ddk-knowledge",
       "entities": []
     }
@@ -82,7 +222,15 @@
   "tokenizerVersion": "1.0.0",
   "patternAnyEntities": [],
   "regex_entities": [],
-  "phraselists": [],
+  "phraselists": [
+    {
+      "name": "i_0",
+      "mode": true,
+      "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
+      "activated": true,
+      "enabledForAllModels": true
+    }
+  ],
   "regex_features": [],
   "patterns": [],
   "settings": [

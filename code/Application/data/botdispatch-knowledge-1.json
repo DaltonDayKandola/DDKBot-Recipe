@@ -1,0 +1,45 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "l-ddk-greeting"
+    },
+    {
+      "name": "q_ddk-knowledge"
+    }
+  ],
+  "entities": [],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "utterances": [],
+  "versionId": "Dispatch",
+  "name": "botdispatch-knowledge-1",
+  "desc": "Dispatch model for botdispatch-knowledge-1",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "i_0",
+      "mode": true,
+      "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
+      "activated": true,
+      "enabledForAllModels": true
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": [
+    {
+      "name": "NormalizeDiacritics",
+      "value": "true"
+    },
+    {
+      "name": "UseAllTrainingData",
+      "value": "true"
+    }
+  ]
+}

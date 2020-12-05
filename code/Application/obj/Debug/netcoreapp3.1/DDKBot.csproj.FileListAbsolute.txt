@@ -83,7 +83,6 @@ D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\botdispatch-knowledge-1.json
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\ddkbotdispatch-knowledge-1.json
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\_experiments\model_001\train_luis_model_augmented.json
-D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\_L_DDK-luis-calendar.json
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\_L_DDk-luis-greeting.json
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\_Q_q_ddk-knowledge.json
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\DDKBot.exe
@@ -186,3 +185,4 @@ D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Users\williamdalton\git\DDKBot\DDKBot\Code\Application\bin\Debug\netcoreapp3.1\data\botdispatch-knowledge-1.json

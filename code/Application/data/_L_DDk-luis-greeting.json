@@ -3,11 +3,21 @@
   "intents": [
     {
       "name": "Greeting",
-      "features": []
+      "features": [
+        {
+          "featureName": "Hello",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "None",
-      "features": []
+      "features": [
+        {
+          "featureName": "Hello",
+          "isRequired": false
+        }
+      ]
     }
   ],
   "entities": [],
@@ -16,6 +26,11 @@
   "closedLists": [],
   "prebuiltEntities": [],
   "utterances": [
+    {
+      "text": "are you well",
+      "intent": "Greeting",
+      "entities": []
+    },
     {
       "text": "good evening",
       "intent": "Greeting",
@@ -27,17 +42,7 @@
       "entities": []
     },
     {
-      "text": "greetings",
-      "intent": "Greeting",
-      "entities": []
-    },
-    {
       "text": "hello",
-      "intent": "Greeting",
-      "entities": []
-    },
-    {
-      "text": "hey there",
       "intent": "Greeting",
       "entities": []
     },
@@ -47,7 +52,12 @@
       "entities": []
     },
     {
-      "text": "wazup",
+      "text": "how are you",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "whatcha",
       "intent": "Greeting",
       "entities": []
     },
@@ -62,19 +72,32 @@
       "entities": []
     },
     {
+      "text": "wozup",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
       "text": "yo",
       "intent": "Greeting",
       "entities": []
     }
   ],
   "versionId": "0.1",
-  "name": "DDk-luis-greeting",
+  "name": "DDK-luis-Greeting",
   "desc": "",
   "culture": "en-us",
   "tokenizerVersion": "1.0.0",
   "patternAnyEntities": [],
   "regex_entities": [],
-  "phraselists": [],
+  "phraselists": [
+    {
+      "name": "Hello",
+      "mode": true,
+      "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
+      "activated": true,
+      "enabledForAllModels": true
+    }
+  ],
   "regex_features": [],
   "patterns": [],
   "settings": []
