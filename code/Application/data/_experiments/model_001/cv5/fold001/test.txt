@@ -1,6 +1,10 @@
 Label	Weight	Text
+l-ddk-bye	1	night night
+l-ddk-contact	1	lets meet up
 l-ddk-greeting	1	good evening
 l-ddk-greeting	1	good morning
+l-ddk-thanks	1	many thanks
+l-ddk-thanks	1	ta
 q_ddk-knowledge	1	what clients do you have
 q_ddk-knowledge	1	what are you
 q_ddk-knowledge	1	what industry credentials do you have

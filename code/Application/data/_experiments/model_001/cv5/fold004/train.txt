@@ -1,4 +1,13 @@
 Label	Weight	Text
+l-ddk-bye	1	good bye
+l-ddk-bye	1	night night
+l-ddk-bye	1	see ya
+l-ddk-bye	1	bye
+l-ddk-contact	1	contact me
+l-ddk-contact	1	lets meet up
+l-ddk-contact	1	phone me
+l-ddk-contact	1	please contact me
+l-ddk-contact	1	how do i contact you
 l-ddk-greeting	1	whats up
 l-ddk-greeting	1	whatcha
 l-ddk-greeting	1	good evening
@@ -8,6 +17,13 @@ l-ddk-greeting	1	are you well
 l-ddk-greeting	1	wozup
 l-ddk-greeting	1	hello
 l-ddk-greeting	1	how are you
+l-ddk-thanks	1	thanks for your help
+l-ddk-thanks	1	thank you
+l-ddk-thanks	1	many thanks
+l-ddk-thanks	1	ta
+l-ddk-thanks	1	cheers
+l-ddk-thanks	1	okay
+l-ddk-thanks	1	thanks very much
 q_ddk-knowledge	1	what type of company are you
 q_ddk-knowledge	1	do you do project management
 q_ddk-knowledge	1	what are your services

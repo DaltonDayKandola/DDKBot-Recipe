@@ -5,7 +5,16 @@
       "name": "l-ddk-greeting"
     },
     {
+      "name": "l-ddk-contact"
+    },
+    {
       "name": "q_ddk-knowledge"
+    },
+    {
+      "name": "l-ddk-bye"
+    },
+    {
+      "name": "l-ddk-thanks"
     }
   ],
   "entities": [],
@@ -14,6 +23,61 @@
   "closedLists": [],
   "prebuiltEntities": [],
   "utterances": [
+    {
+      "text": "good bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "night night",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "see ya",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "goodbye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "contact me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "lets meet up",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "phone me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "please contact me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "can we schedule a meeting",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "how do i contact you",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
     {
       "text": "whats up",
       "intent": "l-ddk-greeting",
@@ -67,6 +131,51 @@
     {
       "text": "how are you",
       "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "thanks for your help",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "many thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "ta",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "cheers",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "okay",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thanks very much",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "ok",
+      "intent": "l-ddk-thanks",
       "entities": []
     },
     {

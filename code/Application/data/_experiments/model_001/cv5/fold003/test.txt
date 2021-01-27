@@ -1,6 +1,10 @@
 Label	Weight	Text
+l-ddk-bye	1	bye
+l-ddk-contact	1	please contact me
 l-ddk-greeting	1	wozup
 l-ddk-greeting	1	hello
+l-ddk-thanks	1	thanks very much
+l-ddk-thanks	1	thanks
 q_ddk-knowledge	1	how can you help me
 q_ddk-knowledge	1	how much experience do you have
 q_ddk-knowledge	1	What IT Services do you specialise in

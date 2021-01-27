@@ -5,7 +5,16 @@
       "name": "l-ddk-greeting"
     },
     {
+      "name": "l-ddk-contact"
+    },
+    {
       "name": "q_ddk-knowledge"
+    },
+    {
+      "name": "l-ddk-bye"
+    },
+    {
+      "name": "l-ddk-thanks"
     }
   ],
   "entities": [],

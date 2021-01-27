@@ -194,7 +194,6 @@ namespace Microsoft.BotBuilderSamples
                             var localMessageTime = messageTimeOffset.ToLocalTime();
                             conversationData.Timestamp = localMessageTime.ToString();
                             conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();     
-
                             
                         }
                     }
@@ -271,9 +270,13 @@ private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContex
         {
             var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
             var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
-            
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
+
+           
             _logger.LogInformation("Running dialog with Message Activity.");
             conversationData.InContactDialog = true ;
+            userProfile.ContactDialogueFlow = true ;
 
             // Run the Dialog with the new message Activity.
             await _userProfileDialog.RunAsync(turnContext, _conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);

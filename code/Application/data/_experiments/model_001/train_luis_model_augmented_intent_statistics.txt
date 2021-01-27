@@ -1,4 +1,7 @@
 No	Intent	Utterance Count	Utterance Average Length	Utterance Maximum Length	Utterance Minimum Length	Utterance Length StdDev
-0	l-ddk-greeting	11	7.54545	12	2	3.8305
-1	q_ddk-knowledge	29	24.31034	37	11	7.47426
- 	__ALL__	40	19.7	37	2	10.06696
+0	l-ddk-bye	5	7	11	3	2.91548
+1	l-ddk-contact	6	15.33333	25	8	6.50128
+2	l-ddk-greeting	11	7.54545	12	2	3.8305
+3	l-ddk-thanks	9	8.44444	20	2	6.24722
+4	q_ddk-knowledge	29	24.31034	37	11	7.47426
+ 	__ALL__	60	16.51667	37	2	10.05323

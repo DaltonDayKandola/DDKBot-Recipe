@@ -17,20 +17,53 @@
       "id": "1"
     },
     {
+      "intentName": "l-ddk-contact",
+      "appId": "bf504a62-4993-4a63-a3af-ab04c4a3e21a",
+      "authoringKey": "f90f02cef9824706ab50cad89c150b73",
+      "version": "0.1",
+      "region": "westeurope",
+      "type": "luis",
+      "name": "DDK-luis-contact",
+      "id": "2"
+    },
+    {
       "intentName": "q_ddk-knowledge",
       "includePrompts": true,
       "kbId": "ab239e4b-c898-4bc7-8a41-a3518b4cbc12",
       "subscriptionKey": "e54348d77f6f4acda25ba7a1f7580dfa",
       "type": "qna",
       "name": "ddk-knowledge-1",
-      "id": "2"
+      "id": "3"
+    },
+    {
+      "intentName": "l-ddk-bye",
+      "appId": "8b89b6f1-d95e-4fbc-b37c-48f2c6247967",
+      "authoringKey": "f90f02cef9824706ab50cad89c150b73",
+      "version": "0.1",
+      "region": "westeurope",
+      "type": "luis",
+      "name": "DDK-luis-Bye",
+      "id": "4"
+    },
+    {
+      "intentName": "l-ddk-thanks",
+      "appId": "9d08b34c-67ed-4e9b-ae05-53b4ef1c55eb",
+      "authoringKey": "f90f02cef9824706ab50cad89c150b73",
+      "version": "0.1",
+      "region": "westeurope",
+      "type": "luis",
+      "name": "DDK-luis-thanks",
+      "id": "5"
     }
   ],
   "serviceIds": [
     "1",
-    "2"
+    "2",
+    "3",
+    "4",
+    "5"
   ],
-  "appId": "61ba6b59-e369-4055-b513-c220d12167f6",
+  "appId": "03eaa69a-403b-475d-9181-68215f8c15f6",
   "authoringKey": "f90f02cef9824706ab50cad89c150b73",
   "version": "Dispatch",
   "region": "westeurope",

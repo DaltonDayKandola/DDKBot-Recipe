@@ -1,6 +1,10 @@
 Label	Weight	Text
+l-ddk-bye	1	goodbye
+l-ddk-contact	1	can we schedule a meeting
 l-ddk-greeting	1	whatsup
 l-ddk-greeting	1	yo
+l-ddk-thanks	1	thanks
+l-ddk-thanks	1	ok
 q_ddk-knowledge	1	what do you make
 q_ddk-knowledge	1	are your people trained
 q_ddk-knowledge	1	who are your clients

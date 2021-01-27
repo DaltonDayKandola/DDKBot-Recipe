@@ -9125,11 +9125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
+      "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
       "projectName": "DDKBot",
-      "projectPath": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\DDKBot.csproj",
+      "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\DDKBot.csproj",
       "packagesPath": "C:\\Users\\williamdalton\\.nuget\\packages\\",
-      "outputPath": "d:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\code\\Application\\obj\\",
+      "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\DDKBot\\Code\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\williamdalton\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9223,7 +9223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,6 +1,10 @@
 Label	Weight	Text
+l-ddk-bye	1	good bye
+l-ddk-contact	1	contact me
 l-ddk-greeting	1	whats up
 l-ddk-greeting	1	whatcha
+l-ddk-thanks	1	thanks for your help
+l-ddk-thanks	1	thank you
 q_ddk-knowledge	1	what type of company are you
 q_ddk-knowledge	1	do you do project management
 q_ddk-knowledge	1	what are your services

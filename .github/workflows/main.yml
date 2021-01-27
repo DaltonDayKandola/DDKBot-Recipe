@@ -39,7 +39,7 @@ jobs:
     - name: 'Setup Dotnet ${{ env.DOTNET_VERSION }}'
       uses: actions/setup-dotnet@v1
 
-    # do some prep command. Get to the corrcet directory and then build and publish the .net app
+    # do some prep command. Get to the correct directory and then build and publish the .net app
     - name: 'prep, dotnet build and publish'
       run: |
         cd code

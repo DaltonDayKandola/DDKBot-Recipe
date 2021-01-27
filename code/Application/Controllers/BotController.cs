@@ -50,7 +50,7 @@ namespace Microsoft.BotBuilderSamples
 
         {
 
-            // Delegate the processingg of the HTTP POST to the adapter.
+            // Delegate the processing of the HTTP POST to the adapter.
 
             // The adapter will invoke the bot.
 

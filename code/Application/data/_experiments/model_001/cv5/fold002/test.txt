@@ -1,6 +1,10 @@
 Label	Weight	Text
+l-ddk-bye	1	see ya
+l-ddk-contact	1	phone me
 l-ddk-greeting	1	hi
 l-ddk-greeting	1	are you well
+l-ddk-thanks	1	cheers
+l-ddk-thanks	1	okay
 q_ddk-knowledge	1	who are you
 q_ddk-knowledge	1	are you certified
 q_ddk-knowledge	1	What consultancy do you provide

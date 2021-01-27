@@ -50,6 +50,8 @@ public class UserProfileDialog : ComponentDialog
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
+
+
         }
 
 
@@ -98,7 +100,7 @@ public class UserProfileDialog : ComponentDialog
                 stepContext.Values["name"] = (string)stepContext.Result;
                 }
 
-            // Determine what to ask based ont he contact Type
+            // Determine what to ask based on the contact Type
             string Contacttext ="";
 
                 switch (stepContext.Values["contacttype"])
@@ -123,16 +125,6 @@ public class UserProfileDialog : ComponentDialog
                 return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = MessageFactory.Text($"{Contacttext}") }, cancellationToken);                    
             }
 
-        
-        private static async Task<DialogTurnResult> ConfirmStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            stepContext.Values["contactvalue"] = (string)stepContext.Result;
-
-            // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is a Prompt Dialog.
-            return await stepContext.PromptAsync(nameof(ConfirmPrompt), new PromptOptions { Prompt = MessageFactory.Text("Is this all ok?") }, cancellationToken);
-        }
-
-
         private  async Task<DialogTurnResult> SummaryStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
 
             {
@@ -145,7 +137,7 @@ public class UserProfileDialog : ComponentDialog
                 userProfile.ContactValue = (string)(string)stepContext.Result;
                 userProfile.Name = (string)stepContext.Values["name"];
 
-                var msg = $"I have your contact preference as {userProfile.ContactType} on {userProfile.ContactValue} and your name as {userProfile.Name}";
+                var msg = $"I have your contact preference as {userProfile.ContactType} on {userProfile.ContactValue} and your name as {userProfile.Name}.\r\nSomeone will be in contact with you shortly.";
                 
                 _userProfile = await _userProfileAccessor.GetAsync(stepContext.Context, () => new UserProfile(), cancellationToken);
                 _userProfile.ContactDialogueFlow = false;     
@@ -153,7 +145,7 @@ public class UserProfileDialog : ComponentDialog
             // WaterfallStep always finishes with the end of the Waterfall or with another dialog; here it is the end.
                 await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = MessageFactory.Text(msg) }, cancellationToken);                    
 
-                return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt =  MessageFactory.Text("Someone will be in contact with you shortly.") }, cancellationToken);                    
+                return await stepContext.EndDialogAsync(null, cancellationToken);
 
             }
 
