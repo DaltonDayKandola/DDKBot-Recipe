@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
@@ -17,12 +18,19 @@
                 "action": "openExternally",
                 "pattern": "^\\s*Now listening on:\\s+(https?://\\S+)"
             },
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development",
-                "VaultUri": "https://ddkbot-keyvault.vault.azure.net/",
-                "AZURE_CLIENT_ID": "9f63a1b5-b9b0-4392-a4cd-55f5e8cef28f",
-                "AZURE_CLIENT_SECRET": "8_LAcm~.1NuN_tWNc5u_2704VPv~HlH.c~",
-                "AZURE_TENANT_ID": "6ec7842d-dedf-4ca1-a7c5-612298e3d539",
+                "VaultUri": "",
+                "AZURE_CLIENT_ID": "",
+                "AZURE_CLIENT_SECRET": "",
+                "AZURE_TENANT_ID": "",
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Code/Application/Views"
