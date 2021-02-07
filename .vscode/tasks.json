@@ -14,14 +14,14 @@
                 // Do not generate summary otherwise it leads to duplicate errors in Problems panel
                 "/consoleloggerparameters:NoSummary"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}/Code/Application"
+            },
             "group": "build",
             "presentation": {
                 "reveal": "silent"
             },
-            "problemMatcher": "$msCompile",
-            "options": {
-                "cwd": "${workspaceRoot}/Code/Application"
-            } 
+            "problemMatcher": "$msCompile"
         }
-    ]   
+    ]
 }
