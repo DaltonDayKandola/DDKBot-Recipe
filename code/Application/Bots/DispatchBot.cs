@@ -142,7 +142,7 @@ namespace Microsoft.BotBuilderSamples
 
                         _logger.LogInformation($"Dispatch unrecognized intent: {intent}.");
 
-                        await turnContext.SendActivityAsync(MessageFactory.Text($"Dispatch unrecognized intent: {intent}."), cancellationToken);
+                        await turnContext.SendActivityAsync(MessageFactory.Text($"Sorry, I didn't quite understand what you meant. Could you try rephrasing?"), cancellationToken);
 
                         break;
 
@@ -194,7 +194,6 @@ namespace Microsoft.BotBuilderSamples
                             var localMessageTime = messageTimeOffset.ToLocalTime();
                             conversationData.Timestamp = localMessageTime.ToString();
                             conversationData.ChannelId = turnContext.Activity.ChannelId.ToString();     
-
                             
                         }
                     }
@@ -271,9 +270,13 @@ private async Task ProcessContactAsync(ITurnContext<IMessageActivity> turnContex
         {
             var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
             var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
-            
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
+
+           
             _logger.LogInformation("Running dialog with Message Activity.");
             conversationData.InContactDialog = true ;
+            userProfile.ContactDialogueFlow = true ;
 
             // Run the Dialog with the new message Activity.
             await _userProfileDialog.RunAsync(turnContext, _conversationState.CreateProperty<DialogState>(nameof(DialogState)), cancellationToken);

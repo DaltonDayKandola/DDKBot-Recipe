@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj": {}
+    "/Users/williamdalton/git/ddkbot/DDKBot/code/Application/DDKBot.csproj": {}
   },
   "projects": {
-    "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj": {
+    "/Users/williamdalton/git/ddkbot/DDKBot/code/Application/DDKBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj",
+        "projectUniqueName": "/Users/williamdalton/git/ddkbot/DDKBot/code/Application/DDKBot.csproj",
         "projectName": "DDKBot",
-        "projectPath": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\DDKBot.csproj",
-        "packagesPath": "C:\\Users\\williamdalton\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\williamdalton\\git\\DDKBot\\ddkbot\\code\\Application\\obj\\",
+        "projectPath": "/Users/williamdalton/git/ddkbot/DDKBot/code/Application/DDKBot.csproj",
+        "packagesPath": "/Users/williamdalton/.nuget/packages/",
+        "outputPath": "/Users/williamdalton/git/ddkbot/DDKBot/code/Application/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\williamdalton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/williamdalton/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,6 +82,10 @@
             "Microsoft.Bot.Builder.Integration.AspNet.Core": {
               "target": "Package",
               "version": "[4.10.3, )"
+            },
+            "Microsoft.Extensions.Configuration.AzureKeyVault": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             }
           },
           "imports": [
@@ -101,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }

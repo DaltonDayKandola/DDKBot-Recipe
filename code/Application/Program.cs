@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+
 namespace Microsoft.BotBuilderSamples
 {
     public class Program
@@ -16,6 +17,7 @@ namespace Microsoft.BotBuilderSamples
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.ConfigureLogging((logging) =>
@@ -24,6 +26,7 @@ namespace Microsoft.BotBuilderSamples
                         logging.AddConsole();
                     });
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.CaptureStartupErrors(true);
                 });
     }
 }
