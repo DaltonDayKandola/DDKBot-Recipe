@@ -24,22 +24,22 @@
   "prebuiltEntities": [],
   "utterances": [
     {
-      "text": "good bye",
+      "text": "i am going now",
       "intent": "l-ddk-bye",
       "entities": []
     },
     {
-      "text": "night night",
+      "text": "i have got to go now",
       "intent": "l-ddk-bye",
       "entities": []
     },
     {
-      "text": "see ya",
+      "text": "chou",
       "intent": "l-ddk-bye",
       "entities": []
     },
     {
-      "text": "bye",
+      "text": "i am off",
       "intent": "l-ddk-bye",
       "entities": []
     },
@@ -49,7 +49,57 @@
       "entities": []
     },
     {
-      "text": "contact me",
+      "text": "bye bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "toodle pip",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "fair well",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "night night",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "good bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "see you later",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "avoir",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "see ya",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "i have to leave now",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "how do i contact you",
       "intent": "l-ddk-contact",
       "entities": []
     },
@@ -59,12 +109,17 @@
       "entities": []
     },
     {
-      "text": "phone me",
+      "text": "come in for an interview",
       "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "please contact me",
+      "text": "how do i find out more",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "how can i know more",
       "intent": "l-ddk-contact",
       "entities": []
     },
@@ -74,57 +129,52 @@
       "entities": []
     },
     {
-      "text": "how do i contact you",
+      "text": "where can we meet",
       "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "whats up",
-      "intent": "l-ddk-greeting",
+      "text": "contact me",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "whatcha",
-      "intent": "l-ddk-greeting",
+      "text": "please contact me",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "good evening",
-      "intent": "l-ddk-greeting",
+      "text": "email me",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "good morning",
-      "intent": "l-ddk-greeting",
+      "text": "what are your contact details",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "hi",
-      "intent": "l-ddk-greeting",
+      "text": "can i contact you",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "are you well",
-      "intent": "l-ddk-greeting",
+      "text": "can i call you",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "wozup",
-      "intent": "l-ddk-greeting",
+      "text": "shall we meet up",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "hello",
-      "intent": "l-ddk-greeting",
+      "text": "phone me",
+      "intent": "l-ddk-contact",
       "entities": []
     },
     {
-      "text": "whatsup",
-      "intent": "l-ddk-greeting",
-      "entities": []
-    },
-    {
-      "text": "yo",
+      "text": "hello, how are you today",
       "intent": "l-ddk-greeting",
       "entities": []
     },
@@ -134,17 +184,77 @@
       "entities": []
     },
     {
+      "text": "good evening",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "hello how are you today",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "good afternoon, i hope you are well",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "yo",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "good morning",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "whats up",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "wozup",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "are you well",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "are you ok today",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "whatsup",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "whatcha",
+      "intent": "l-ddk-greeting",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
       "text": "thanks for your help",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "thank you",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "many thanks",
       "intent": "l-ddk-thanks",
       "entities": []
     },
@@ -154,12 +264,57 @@
       "entities": []
     },
     {
+      "text": "thanks ddkbot",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you for you assistance",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "many thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "you have been very helpful",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thankyou",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you computer",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "that is great",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
       "text": "cheers",
       "intent": "l-ddk-thanks",
       "entities": []
     },
     {
-      "text": "okay",
+      "text": "brilliant help thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "that great, thanks for your help",
       "intent": "l-ddk-thanks",
       "entities": []
     },
@@ -169,42 +324,7 @@
       "entities": []
     },
     {
-      "text": "thanks",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "ok",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "what type of company are you",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "do you do project management",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "what are your services",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "what are your company principles",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "who is part of ddk",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "what it skills do you provide",
+      "text": "are your people trained",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
@@ -214,37 +334,12 @@
       "entities": []
     },
     {
-      "text": "what are you",
+      "text": "how much experience do you have",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "what industry credentials do you have",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "do you have any industry partners",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "are you an accredited organisation",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "what are your company values",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "who are you",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "are you certified",
+      "text": "who are your clients",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
@@ -259,7 +354,17 @@
       "entities": []
     },
     {
-      "text": "can you tell me what you are",
+      "text": "what are your company values",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "current roles",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you hiring",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
@@ -269,42 +374,27 @@
       "entities": []
     },
     {
-      "text": "how can you help me",
+      "text": "i am not sure what to do",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "how much experience do you have",
+      "text": "how big is your company",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "what it services do you specialise in",
+      "text": "i am confused about what to do",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "who works for you",
+      "text": "what industry credentials do you have",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "what do you do",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "what do you make",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "are your people trained",
-      "intent": "q_ddk-knowledge",
-      "entities": []
-    },
-    {
-      "text": "who are your clients",
+      "text": "what can i ask you",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
@@ -314,12 +404,147 @@
       "entities": []
     },
     {
-      "text": "how many people do you employ",
+      "text": "can you tell me what you are",
       "intent": "q_ddk-knowledge",
       "entities": []
     },
     {
-      "text": "how big is your company",
+      "text": "where do i work",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you have work",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you certified",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how can you help me",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "i am a bit lost",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what it skills do you provide",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what do you do",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you have jobs",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "work from home",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what are your company principles",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how much will i get payed",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who works for you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you have any industry partners",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "ok, can you help me",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what will my salary be",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "working arrangements",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who is part of ddk",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you recruiting",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "who are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what do you make",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "are you an accredited organisation",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what are your services",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what it services do you specialise in",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "do you do project management",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "what type of company are you",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "i need help",
+      "intent": "q_ddk-knowledge",
+      "entities": []
+    },
+    {
+      "text": "how many people do you employ",
       "intent": "q_ddk-knowledge",
       "entities": []
     }
@@ -331,15 +556,7 @@
   "tokenizerVersion": "1.0.0",
   "patternAnyEntities": [],
   "regex_entities": [],
-  "phraselists": [
-    {
-      "name": "i_0",
-      "mode": true,
-      "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
-      "activated": true,
-      "enabledForAllModels": true
-    }
-  ],
+  "phraselists": [],
   "regex_features": [],
   "patterns": [],
   "settings": [
