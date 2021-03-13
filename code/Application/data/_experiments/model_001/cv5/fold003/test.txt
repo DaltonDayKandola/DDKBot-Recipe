@@ -1,0 +1,22 @@
+Label	Weight	Text
+l-ddk-bye	1	good bye
+l-ddk-bye	1	see you later
+l-ddk-bye	1	bye
+l-ddk-contact	1	email me
+l-ddk-contact	1	what are your contact details
+l-ddk-contact	1	can i contact you
+l-ddk-greeting	1	hello
+l-ddk-greeting	1	wozup
+l-ddk-greeting	1	are you well
+l-ddk-thanks	1	thank you computer
+l-ddk-thanks	1	that is great
+l-ddk-thanks	1	cheers
+q_ddk-knowledge	1	how much will i get payed
+q_ddk-knowledge	1	who works for you
+q_ddk-knowledge	1	Do you have any industry partners
+q_ddk-knowledge	1	OK, can you help me
+q_ddk-knowledge	1	what will my salary be
+q_ddk-knowledge	1	working arrangements
+q_ddk-knowledge	1	Who is part of DDK
+q_ddk-knowledge	1	are you recruiting
+q_ddk-knowledge	1	what are you

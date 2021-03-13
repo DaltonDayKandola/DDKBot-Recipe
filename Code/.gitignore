@@ -1,2 +1,4 @@
-Code/Application/bin
-Code/Application/obj
+Code/Application/appsettings.json
+Code/Application/bin/
+Code/Application/obj/
+.vscode/
