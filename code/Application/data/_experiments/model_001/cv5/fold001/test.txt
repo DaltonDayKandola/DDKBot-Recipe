@@ -1,13 +1,22 @@
 Label	Weight	Text
-l-ddk-bye	1	night night
-l-ddk-contact	1	lets meet up
-l-ddk-greeting	1	good evening
-l-ddk-greeting	1	good morning
+l-ddk-bye	1	i am off
+l-ddk-bye	1	goodbye
+l-ddk-bye	1	bye bye
+l-ddk-contact	1	how do i find out more
+l-ddk-contact	1	how can i know more
+l-ddk-contact	1	can we schedule a meeting
+l-ddk-greeting	1	hi
+l-ddk-greeting	1	hello how are you today
+l-ddk-greeting	1	good afternoon, i hope you are well
+l-ddk-thanks	1	thanks ddkbot
+l-ddk-thanks	1	thank you for you assistance
 l-ddk-thanks	1	many thanks
-l-ddk-thanks	1	ta
-q_ddk-knowledge	1	what clients do you have
-q_ddk-knowledge	1	what are you
+q_ddk-knowledge	1	what do you sell
+q_ddk-knowledge	1	I am not sure what to do
+q_ddk-knowledge	1	How big is your company
+q_ddk-knowledge	1	I am confused about what to do
 q_ddk-knowledge	1	what industry credentials do you have
-q_ddk-knowledge	1	Do you have any industry partners
-q_ddk-knowledge	1	are you an accredited organisation
-q_ddk-knowledge	1	What are your company values
+q_ddk-knowledge	1	what can i ask you
+q_ddk-knowledge	1	can you tell me what you sell
+q_ddk-knowledge	1	can you tell me what you are
+q_ddk-knowledge	1	where do I work

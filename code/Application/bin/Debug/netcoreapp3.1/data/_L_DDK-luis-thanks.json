@@ -3,7 +3,12 @@
   "intents": [
     {
       "name": "l-ddk-thanks",
-      "features": []
+      "features": [
+        {
+          "featureName": "ddk-thanks",
+          "isRequired": false
+        }
+      ]
     },
     {
       "name": "None",
@@ -17,22 +22,17 @@
   "prebuiltEntities": [],
   "utterances": [
     {
+      "text": "brilliant help thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
       "text": "cheers",
       "intent": "l-ddk-thanks",
       "entities": []
     },
     {
       "text": "many thanks",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "ok",
-      "intent": "l-ddk-thanks",
-      "entities": []
-    },
-    {
-      "text": "okay",
       "intent": "l-ddk-thanks",
       "entities": []
     },
@@ -47,7 +47,22 @@
       "entities": []
     },
     {
+      "text": "thank you computer",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you for you assistance",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
       "text": "thanks",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "thanks ddkbot",
       "intent": "l-ddk-thanks",
       "entities": []
     },
@@ -60,6 +75,26 @@
       "text": "thanks very much",
       "intent": "l-ddk-thanks",
       "entities": []
+    },
+    {
+      "text": "thankyou",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "that great, thanks for your help",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "that is great",
+      "intent": "l-ddk-thanks",
+      "entities": []
+    },
+    {
+      "text": "you have been very helpful",
+      "intent": "l-ddk-thanks",
+      "entities": []
     }
   ],
   "versionId": "0.1",
@@ -69,7 +104,15 @@
   "tokenizerVersion": "1.0.0",
   "patternAnyEntities": [],
   "regex_entities": [],
-  "phraselists": [],
+  "phraselists": [
+    {
+      "name": "ddk-thanks",
+      "mode": true,
+      "words": "okay,ok,ta,thanks,cheers,thank,thanx,:),thankyou,thnx,: ),thank-you,=],thank you,thank you very much,many thanks",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
   "regex_features": [],
   "patterns": [],
   "settings": []

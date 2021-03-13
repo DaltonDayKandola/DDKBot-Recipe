@@ -44,7 +44,8 @@
         "who are you",
         "what type of company are you",
         "what are you",
-        "can you tell me what you are"
+        "can you tell me what you are",
+        "what do you do"
       ],
       "metadata": [],
       "alternateQuestionClusters": [],
@@ -52,7 +53,7 @@
         "isContextOnly": false,
         "prompts": []
       },
-      "lastUpdatedTimestamp": "0001-01-01T00:00:00+00:00",
+      "lastUpdatedTimestamp": "2021-03-07T12:03:04.322+00:00",
       "isDocumentText": false
     },
     {
@@ -147,6 +148,67 @@
         "prompts": []
       },
       "lastUpdatedTimestamp": "0001-01-01T00:00:00+00:00",
+      "isDocumentText": false
+    },
+    {
+      "id": 11,
+      "answer": "We are always looking for people. If your interested in us and what we want to do, we are interested in you, and what you do. Whatever your background or skill set.\n\nIf you want to know more, and see where this goes, simply ask me to contact you and we will speak soon.\n\nMy colleague, who is human, will contact you.",
+      "source": "Editorial",
+      "questions": [
+        "are you recruiting",
+        "do you have jobs",
+        "do you have work",
+        "are you hiring",
+        "current roles"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      },
+      "lastUpdatedTimestamp": "2021-03-07T11:26:24.731+00:00",
+      "isDocumentText": false
+    },
+    {
+      "id": 12,
+      "answer": "We offer flexible working. You will be based at home but we meet up regularly to see how its all going. \nHave a look at our website for details on our values and working ethos.\n\nwww.ddklimited.com",
+      "source": "Editorial",
+      "questions": [
+        "work from home",
+        "working arrangements",
+        "how much will i get payed",
+        "what will my salary be",
+        "where do I work"
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      },
+      "lastUpdatedTimestamp": "2021-03-07T11:50:22.024+00:00",
+      "isDocumentText": false
+    },
+    {
+      "id": 13,
+      "answer": "Ask me a question about what we do, what our services are, what we sell, who works for us,  how you can work for us,  find out more or get in touch with us",
+      "source": "Editorial",
+      "questions": [
+        "what can i ask you",
+        "I need help",
+        "I am not sure what to do",
+        "I am confused about what to do",
+        "I am a bit lost",
+        "OK, can you help me "
+      ],
+      "metadata": [],
+      "alternateQuestionClusters": [],
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      },
+      "lastUpdatedTimestamp": "2021-03-07T15:36:45.589+00:00",
       "isDocumentText": false
     }
   ]

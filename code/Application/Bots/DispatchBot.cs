@@ -73,7 +73,7 @@ namespace Microsoft.BotBuilderSamples
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            const string WelcomeText = "How can I help you today?";
+            const string WelcomeText = "How can I help you today (One question at a time please)?";
             const string GDPR = "Please be aware that the DDK Bot does record this conversation.\r\nWe only use this data to improve the Bots conversation accuracy and to contact you if you requested.\r\nWe will never pass this data onto any 3rd Party.\r\nFurther details on DDK Privacy can be found on our web site.";
 
             foreach (var member in membersAdded)
@@ -92,10 +92,16 @@ namespace Microsoft.BotBuilderSamples
 
             var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
             var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
+             var conversationStateAccessors =  _conversationState.CreateProperty<ConversationData>(nameof(ConversationData));
+            var conversationData = await conversationStateAccessors.GetAsync(turnContext, () => new ConversationData());
 
             if (userProfile.ContactDialogueFlow ==true)
             {
                 await ProcessContactAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
+            }
+            else if (conversationData.PromptedUserForName==true)
+            {
+                await ProcessGreetingAsync(turnContext, recognizerResult.Properties["luisResult"] as LuisResult, cancellationToken);
             }
             else
             {

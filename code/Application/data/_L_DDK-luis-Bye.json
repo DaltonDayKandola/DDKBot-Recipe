@@ -17,7 +17,27 @@
   "prebuiltEntities": [],
   "utterances": [
     {
+      "text": "avoir",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
       "text": "bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "bye bye",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "chou",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "fair well",
       "intent": "l-ddk-bye",
       "entities": []
     },
@@ -32,12 +52,42 @@
       "entities": []
     },
     {
+      "text": "i am going now",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "i am off",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "i have got to go now",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "i have to leave now",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
       "text": "night night",
       "intent": "l-ddk-bye",
       "entities": []
     },
     {
       "text": "see ya",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "see you later",
+      "intent": "l-ddk-bye",
+      "entities": []
+    },
+    {
+      "text": "toodle pip",
       "intent": "l-ddk-bye",
       "entities": []
     }

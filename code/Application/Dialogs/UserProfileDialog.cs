@@ -81,7 +81,7 @@ public class UserProfileDialog : ComponentDialog
                 }
             else
                 {
-                    return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = MessageFactory.Text("Can I ask your name?") }, cancellationToken);
+                    return await stepContext.PromptAsync(nameof(TextPrompt), new PromptOptions { Prompt = MessageFactory.Text("What is your name?") }, cancellationToken);
                 }
             }
 
@@ -106,7 +106,7 @@ public class UserProfileDialog : ComponentDialog
                 switch (stepContext.Values["contacttype"])
                 {
                     case "call":
-                        Contacttext = "What is the best number to call you on?";
+                        Contacttext = "What number, either mobile, home or work, shall I call you on?";
                         break;
                     case "email" :
                         Contacttext = "What is your email address?";
@@ -115,7 +115,7 @@ public class UserProfileDialog : ComponentDialog
                         Contacttext = "What is your mobile number to text on?";
                         break;
                     case "chat" :
-                        Contacttext = "What's your chat address or number (i.e. whats app will be your mobile number)?";
+                        Contacttext = "What's your chat address or number (i.e. If your using Whatsapp, it will be your mobile number)?";
                         break;                                                
                     default:
                         Contacttext = "Im confused!";

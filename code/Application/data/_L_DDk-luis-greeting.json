@@ -7,17 +7,16 @@
         {
           "featureName": "Hello",
           "isRequired": false
+        },
+        {
+          "featureName": "Name of Greeting",
+          "isRequired": false
         }
       ]
     },
     {
       "name": "None",
-      "features": [
-        {
-          "featureName": "Hello",
-          "isRequired": false
-        }
-      ]
+      "features": []
     }
   ],
   "entities": [],
@@ -27,7 +26,17 @@
   "prebuiltEntities": [],
   "utterances": [
     {
+      "text": "are you ok today",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
       "text": "are you well",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "good afternoon, i hope you are well",
       "intent": "Greeting",
       "entities": []
     },
@@ -43,6 +52,16 @@
     },
     {
       "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hello how are you today",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hello, how are you today",
       "intent": "Greeting",
       "entities": []
     },
@@ -95,7 +114,14 @@
       "mode": true,
       "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
       "activated": true,
-      "enabledForAllModels": true
+      "enabledForAllModels": false
+    },
+    {
+      "name": "Name of Greeting",
+      "mode": true,
+      "words": "Bot,DDK Bot,DDK,DDKBot,Computer,Machine,William,Julian,Jatinder",
+      "activated": true,
+      "enabledForAllModels": false
     }
   ],
   "regex_features": [],

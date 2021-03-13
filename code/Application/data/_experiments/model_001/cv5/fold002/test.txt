@@ -1,13 +1,22 @@
 Label	Weight	Text
-l-ddk-bye	1	see ya
-l-ddk-contact	1	phone me
-l-ddk-greeting	1	hi
-l-ddk-greeting	1	are you well
-l-ddk-thanks	1	cheers
-l-ddk-thanks	1	okay
-q_ddk-knowledge	1	who are you
+l-ddk-bye	1	toodle pip
+l-ddk-bye	1	fair well
+l-ddk-bye	1	night night
+l-ddk-contact	1	where can we meet
+l-ddk-contact	1	contact me
+l-ddk-contact	1	please contact me
+l-ddk-greeting	1	yo
+l-ddk-greeting	1	good morning
+l-ddk-greeting	1	whats up
+l-ddk-thanks	1	you have been very helpful
+l-ddk-thanks	1	thank you
+l-ddk-thanks	1	thankyou
+q_ddk-knowledge	1	do you have work
 q_ddk-knowledge	1	are you certified
-q_ddk-knowledge	1	What consultancy do you provide
-q_ddk-knowledge	1	who do you work for
-q_ddk-knowledge	1	can you tell me what you are
-q_ddk-knowledge	1	what do you sell
+q_ddk-knowledge	1	how can you help me
+q_ddk-knowledge	1	I am a bit lost
+q_ddk-knowledge	1	What IT skills do you provide
+q_ddk-knowledge	1	what do you do
+q_ddk-knowledge	1	do you have jobs
+q_ddk-knowledge	1	work from home
+q_ddk-knowledge	1	what are your company principles

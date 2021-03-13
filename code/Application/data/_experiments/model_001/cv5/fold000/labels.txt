@@ -1,6 +1,6 @@
 Label	LabelName	Samples
-0	l-ddk-bye	5
-1	l-ddk-contact	6
-2	l-ddk-greeting	11
-3	l-ddk-thanks	9
-4	q_ddk-knowledge	29
+0	l-ddk-bye	15
+1	l-ddk-contact	15
+2	l-ddk-greeting	15
+3	l-ddk-thanks	15
+4	q_ddk-knowledge	45

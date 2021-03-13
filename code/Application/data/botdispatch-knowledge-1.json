@@ -30,15 +30,7 @@
   "tokenizerVersion": "1.0.0",
   "patternAnyEntities": [],
   "regex_entities": [],
-  "phraselists": [
-    {
-      "name": "i_0",
-      "mode": true,
-      "words": "hi,good morning,good afternoon,good evening,hello,watcha,good day,welcome,hello how are you,hi how are you",
-      "activated": true,
-      "enabledForAllModels": true
-    }
-  ],
+  "phraselists": [],
   "regex_features": [],
   "patterns": [],
   "settings": [
