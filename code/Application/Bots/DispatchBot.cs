@@ -73,7 +73,7 @@ namespace Microsoft.BotBuilderSamples
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            const string WelcomeText = "How can I help you today (One question at a time please as I'm not that clever...yet)?";
+            const string WelcomeText = "How can I help you today (One question at a time please)?";
             const string GDPR = "Please be aware that the DDK Bot does record this conversation.\r\nWe only use this data to improve the Bots conversation accuracy and to contact you if you requested.\r\nWe will never pass this data onto any 3rd Party.\r\nFurther details on DDK Privacy can be found on our web site.";
 
             foreach (var member in membersAdded)
