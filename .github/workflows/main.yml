@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+
+#on:
+# push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
+
+# This allows for a manual trigger. Good for when testing the deployment script
+on:
+  workflow_dispatch:
+
+env:
+
+  AZURE_WEBAPP_NAME: ddkbot-botservices-webapp-01    # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  CODE_PACKAGE_PATH: './home/runner/work/DDKBot/DDKBot/code/Application'              # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '3.1.x'             # set this to the dot net version to use
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+  build:    
+    name: 'Build and test job'
+    runs-on: ubuntu-latest
+  
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # checkout the repo
+    - name: 'Checkout GitHub Action' 
+      uses: actions/checkout@master
+
+    # Runs a single command using the runners shell
+    - name: 'Setup Dotnet ${{ env.DOTNET_VERSION }}'
+      uses: actions/setup-dotnet@v1
+
+    # do some prep command. Get to the correct directory and then build and publish the .net app
+    - name: 'prep, dotnet build and publish'
+      run: |
+        cd code
+        cd Application
+        pwd
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish -c Release -o '.'       
+      
+    #  Deploy to Azure Web apps
+    - name: 'Run Azure webapp deploy action using publish profile credentials'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}

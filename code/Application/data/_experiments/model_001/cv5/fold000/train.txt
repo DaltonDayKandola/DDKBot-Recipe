@@ -1,0 +1,85 @@
+Label	Weight	Text
+l-ddk-bye	1	i am off
+l-ddk-bye	1	goodbye
+l-ddk-bye	1	bye bye
+l-ddk-bye	1	toodle pip
+l-ddk-bye	1	fair well
+l-ddk-bye	1	night night
+l-ddk-bye	1	good bye
+l-ddk-bye	1	see you later
+l-ddk-bye	1	bye
+l-ddk-bye	1	avoir
+l-ddk-bye	1	see ya
+l-ddk-bye	1	i have to leave now
+l-ddk-contact	1	how do i find out more
+l-ddk-contact	1	how can i know more
+l-ddk-contact	1	can we schedule a meeting
+l-ddk-contact	1	where can we meet
+l-ddk-contact	1	contact me
+l-ddk-contact	1	please contact me
+l-ddk-contact	1	email me
+l-ddk-contact	1	what are your contact details
+l-ddk-contact	1	can i contact you
+l-ddk-contact	1	can i call you
+l-ddk-contact	1	shall we meet up
+l-ddk-contact	1	phone me
+l-ddk-greeting	1	hi
+l-ddk-greeting	1	hello how are you today
+l-ddk-greeting	1	good afternoon, i hope you are well
+l-ddk-greeting	1	yo
+l-ddk-greeting	1	good morning
+l-ddk-greeting	1	whats up
+l-ddk-greeting	1	hello
+l-ddk-greeting	1	wozup
+l-ddk-greeting	1	are you well
+l-ddk-greeting	1	are you ok today
+l-ddk-greeting	1	whatsup
+l-ddk-greeting	1	whatcha
+l-ddk-thanks	1	thanks ddkbot
+l-ddk-thanks	1	thank you for you assistance
+l-ddk-thanks	1	many thanks
+l-ddk-thanks	1	you have been very helpful
+l-ddk-thanks	1	thank you
+l-ddk-thanks	1	thankyou
+l-ddk-thanks	1	thank you computer
+l-ddk-thanks	1	that is great
+l-ddk-thanks	1	cheers
+l-ddk-thanks	1	brilliant help thanks
+l-ddk-thanks	1	that great, thanks for your help
+l-ddk-thanks	1	thanks very much
+q_ddk-knowledge	1	what do you sell
+q_ddk-knowledge	1	I am not sure what to do
+q_ddk-knowledge	1	How big is your company
+q_ddk-knowledge	1	I am confused about what to do
+q_ddk-knowledge	1	what industry credentials do you have
+q_ddk-knowledge	1	what can i ask you
+q_ddk-knowledge	1	can you tell me what you sell
+q_ddk-knowledge	1	can you tell me what you are
+q_ddk-knowledge	1	where do I work
+q_ddk-knowledge	1	do you have work
+q_ddk-knowledge	1	are you certified
+q_ddk-knowledge	1	how can you help me
+q_ddk-knowledge	1	I am a bit lost
+q_ddk-knowledge	1	What IT skills do you provide
+q_ddk-knowledge	1	what do you do
+q_ddk-knowledge	1	do you have jobs
+q_ddk-knowledge	1	work from home
+q_ddk-knowledge	1	what are your company principles
+q_ddk-knowledge	1	how much will i get payed
+q_ddk-knowledge	1	who works for you
+q_ddk-knowledge	1	Do you have any industry partners
+q_ddk-knowledge	1	OK, can you help me
+q_ddk-knowledge	1	what will my salary be
+q_ddk-knowledge	1	working arrangements
+q_ddk-knowledge	1	Who is part of DDK
+q_ddk-knowledge	1	are you recruiting
+q_ddk-knowledge	1	what are you
+q_ddk-knowledge	1	who are you
+q_ddk-knowledge	1	what do you make
+q_ddk-knowledge	1	are you an accredited organisation
+q_ddk-knowledge	1	what are your services
+q_ddk-knowledge	1	What IT Services do you specialise in
+q_ddk-knowledge	1	do you do project management
+q_ddk-knowledge	1	what type of company are you
+q_ddk-knowledge	1	I need help
+q_ddk-knowledge	1	How many people do you employ

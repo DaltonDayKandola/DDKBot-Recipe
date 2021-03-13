@@ -1,0 +1,152 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "l-ddk-contact",
+      "features": [
+        {
+          "featureName": "meeting",
+          "isRequired": false
+        },
+        {
+          "featureName": "schedule",
+          "isRequired": false
+        },
+        {
+          "featureName": "day of the week",
+          "isRequired": false
+        },
+        {
+          "featureName": "Recruitment",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "utterances": [
+    {
+      "text": "can i call you",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "can i contact you",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "can we schedule a meeting",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "come in for an interview",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "contact me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "email me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "how can i know more",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "how do i contact you",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "how do i find out more",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "lets meet up",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "phone me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "please contact me",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "shall we meet up",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "what are your contact details",
+      "intent": "l-ddk-contact",
+      "entities": []
+    },
+    {
+      "text": "where can we meet",
+      "intent": "l-ddk-contact",
+      "entities": []
+    }
+  ],
+  "versionId": "0.1",
+  "name": "DDK-luis-contact",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "meeting",
+      "mode": true,
+      "words": "meeting,meet,chat,attend,invited,connect,participate,invite,visit,see,partake",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "schedule",
+      "mode": true,
+      "words": "schedule,time,book,date,contact,location",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "day of the week",
+      "mode": true,
+      "words": "monday,tuesday,wednesday,thursday,friday,saturday,sundays,saturdays,day,thursdays,wednesdays,mondays,thrusday,wenesday,thurdays,tueday,thusday,tuseday,staurday,saturday/sunday,wednesay,satuday,saturady,saturdy,mornign,weeked,tursday,weekday,week day,month,date,year,hour,minutes",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "Recruitment",
+      "mode": true,
+      "words": "interview,recruit,recruitment,recruiting,hiring,hire,employ,to recruit,job,to hire,to apply,employing,jobs,contract,contractor,contracting,positions,salary,contracts,jobs ,position",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

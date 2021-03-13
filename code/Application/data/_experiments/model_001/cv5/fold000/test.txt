@@ -1,0 +1,22 @@
+Label	Weight	Text
+l-ddk-bye	1	i am going now
+l-ddk-bye	1	i have got to go now
+l-ddk-bye	1	chou
+l-ddk-contact	1	how do i contact you
+l-ddk-contact	1	lets meet up
+l-ddk-contact	1	come in for an interview
+l-ddk-greeting	1	hello, how are you today
+l-ddk-greeting	1	how are you
+l-ddk-greeting	1	good evening
+l-ddk-thanks	1	thanks
+l-ddk-thanks	1	thanks for your help
+l-ddk-thanks	1	ta
+q_ddk-knowledge	1	are your people trained
+q_ddk-knowledge	1	what clients do you have
+q_ddk-knowledge	1	how much experience do you have
+q_ddk-knowledge	1	who are your clients
+q_ddk-knowledge	1	What consultancy do you provide
+q_ddk-knowledge	1	who do you work for
+q_ddk-knowledge	1	What are your company values
+q_ddk-knowledge	1	current roles
+q_ddk-knowledge	1	are you hiring

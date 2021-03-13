@@ -1,0 +1,55 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "authoringName": {
+            "type": "string"
+        },
+        "runtimeName": {
+            "type": "string"
+        },
+        "authoringLocation": {
+            "type": "string"
+        },
+        "runtimeLocation": {
+            "type": "string"
+        },
+        "authoringSku": {
+            "type": "string"
+        },
+        "runtimeSku": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2016-02-01-preview",
+            "name": "[parameters('runtimeName')]",
+            "location": "[parameters('runtimeLocation')]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "kind": "LUIS",
+            "sku": {
+                "name": "[parameters('runtimeSku')]"
+            },
+            "properties": {
+                "customSubDomainName": "[parameters('runtimeName')]"
+            }
+        },
+        {
+            "apiVersion": "2016-02-01-preview",
+            "name": "[parameters('authoringName')]",
+            "location": "[parameters('authoringLocation')]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "kind": "LUIS.Authoring",
+            "sku": {
+                "name": "[parameters('authoringSku')]"
+            },
+            "properties": {
+                "customSubDomainName": "[parameters('authoringName')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.CognitiveServices/accounts', parameters('runtimeName'))]"
+            ]
+        }
+    ]
+}
