@@ -14,7 +14,6 @@ using Microsoft.Bot.Schema;
 
 namespace Microsoft.BotBuilderSamples
 {
-
 public class UserProfileDialog : ComponentDialog
     {
         private readonly IStatePropertyAccessor<UserProfile> _userProfileAccessor;

@@ -20,7 +20,6 @@ namespace Microsoft.BotBuilderSamples
     public class DispatchBot : ActivityHandler
     {
 
-
         private readonly BlobsTranscriptStore _myTranscripts = new BlobsTranscriptStore($"DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey={new getmysecret().KeyVaultsecretName("StorageBlobKey").ToString()};EndpointSuffix=core.windows.net", "ddkcontainer01");
     
         private readonly ILogger<DispatchBot> _logger;

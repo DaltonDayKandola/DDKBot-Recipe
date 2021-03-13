@@ -12,7 +12,7 @@ class getmysecret
         string keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri")).ToString();
         var client = new SecretClient(new Uri(keyVaultEndpoint), new EnvironmentCredential());
 
-        return client.GetSecret(secretname).Value.Value.ToString() ; // field  
+        return client.GetSecret(secretname).Value.Value.ToString() ; //field  
 
     }  
 }
