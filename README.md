@@ -35,20 +35,44 @@ Code/Application/ | web.config  |The web.config is a file that is read by IIS an
 
 ## Code/Infrastructure: Infrastructure Code
 
-Path | File | Description
+Infrastructure | File | Description
 --- | --- | ---
+Azure Bot Channel Registration | |
+Azure App Service Plan | |
+Azure App Service | |
+Azure Key Vault | |
+Azure Container Registry | |
+Azure Resource Groups | |
+
 
 ##  Language and QnA Maker cognitive services
-There are 4 LUIS and 1 QnAmaker models that have been trained and published.
-The QnA maker deals with question people have about the organisation and what we do and sell.
-The 4 LUIs model deals with greetings and contacts
-There is 1 LUIS Model that is created by the dispatcher to understand what model to route requests too.
+There are 4 LUIS and 1 QnAmaker models that have been trained and published.  
+
+Model | Azure Resource | Description
+--- | ---
+ botdispatch-knowledge-1 | DDK-luis-Greeting-Authoring | The dispatch tool needs authoring access to read the existing LUIS and QnA Maker apps in order to create a new parent LUIS Model ( botdispatch-knowledge-1) that dispatches to the appropriate LUIS and QnA Maker Conversation apps!
+ DDK-luis-thanks | DDK-luis-Greeting | 2 * Intents, Thanks (with example utterances) and None, 0 entities and 1 features. 
+ DDK-luis-bye | DDK-luis-Greeting | 2 * Intents, Bye (with example utterances) and None, 0 entities,  2 features.
+ DDK-luis-contact | DDK-luis-Greeting | 2 * Intents, Contact Me (with example utterances) and None,  0 entities, 3 features.
+ DDK-luis-greeting | DDK-luis-Greeting | 2 * Intents, Hello (with example utterances) and None,  0 entities, 2 features.
+
+
+The QnA maker deals with question people have about the organisation and what we do and sell.  
+The 4 LUIs model deals with greetings and contacts.
+There is 1 LUIS Model, created by the dispatcher, that is used to understand abd route requests to the appropriate LUIS Model.
+
 
 # VsCode Extensions
 * NuGet Package Manager
 * C#
 * Code Spell Checker
 * GitHub
+
+# Testing
+The DDK Bot can be tested using Bot Framework Emulator or the Bot Framework webchat javascript libraries. 
+The DDK test harness is a simple HTML page that references the Bot Framework webchat JS libraries and the our own typesript which we compile into javascript.
+We also make use of ngrok. This allows us to call our local DDk Bot service running and debugging in VS Code from the Webchat Direct Line channel in Bot Channels Registration resource in Azure.
+
 
 # Package Dependencies
 <PackageReference Include="Azure.Identity" Version="1.2.3" />
@@ -75,3 +99,21 @@ There is 1 LUIS Model that is created by the dispatcher to understand what model
 [2]: [https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs]
 [3]: https://github.com/Microsoft/botbuilder-tools/tree/master/packages/Dispatch
 [4]: https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0
+
+
+## Further reading
+
+- [Bot Framework Documentation](https://docs.botframework.com)
+- [Bot Basics](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
+- [Using LUIS for Language Understanding](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0&tabs=js)
+- [LUIS documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/)
+- [Activity processing](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-activity-processing?view=azure-bot-service-4.0)
+- [Azure Bot Service Introduction](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
+- [Azure Bot Service Documentation](https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0)
+- [.NET Core CLI tools](https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x)
+- [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)
+- [Azure Portal](https://portal.azure.com)
+- [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
+- [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
+- [Intents classify utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-model#intents-classify-utterances)
+- [ngrok](https://ngrok.com/)

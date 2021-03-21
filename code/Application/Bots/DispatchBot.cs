@@ -14,10 +14,20 @@ using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Azure.Blobs;
+using  Newtonsoft.Json;
 
 namespace Microsoft.BotBuilderSamples
 {
+
+    public class LiveAssistChannelData
+    {
+        [JsonProperty("location", NullValueHandling = NullValueHandling.Ignore)]
+        public string Location { get; set; }
+        
+    }
+
     public class DispatchBot : ActivityHandler
+
     {
 
         private readonly BlobsTranscriptStore _myTranscripts = new BlobsTranscriptStore($"DefaultEndpointsProtocol=https;AccountName=ddkstorageaccount01;AccountKey={new getmysecret().KeyVaultsecretName("StorageBlobKey").ToString()};EndpointSuffix=core.windows.net", "ddkcontainer01");
@@ -40,11 +50,46 @@ namespace Microsoft.BotBuilderSamples
 
         }
 
+
+        protected override async Task OnEventActivityAsync(ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+        {
+
+            var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
+            var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
+
+            string WelcomeText = "";
+            if (turnContext.Activity.Type == "webchat/join")
+            {
+                switch (turnContext.Activity.Value.ToString() )
+                {
+                case "CONTACTUS":
+                        WelcomeText = "How can I help you find out more about DDK?";
+                    break;
+                case "RECRUITMENT":
+                    WelcomeText = "How can I help you find a great career at DDK?";
+                break;
+                default:                    
+                    WelcomeText = "How can I help you today (One question at a time please)?";
+                    break;
+                }
+            }
+            else{
+                WelcomeText = "How can I help you today (One question at a time please)?";
+                }                  
+            const string GDPR = "Please be aware that the DDK Bot does record this conversation.\r\nWe only use this data to improve the Bots conversation accuracy and to contact you if you requested.\r\nWe will never pass this data onto any 3rd Party.\r\nFurther details on DDK Privacy can be found on our web site.";
+
+
+//                if (member.Id != turnContext.Activity.Recipient.Id)
+
+                await turnContext.SendActivityAsync($"Welcome to our DDK Bot! {WelcomeText}"); 
+                await turnContext.SendActivityAsync(MessageFactory.Text(GDPR), cancellationToken);
+                    
+        }
+
        public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
 
         {
              await base.OnTurnAsync(turnContext, cancellationToken);
-
 
            //  Save any state changes that might have occurred during the turn.
            //  So this saves state at every turn which means you will see the evolution of the 
@@ -72,20 +117,13 @@ namespace Microsoft.BotBuilderSamples
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
-            const string WelcomeText = "How can I help you today (One question at a time please)?";
-            const string GDPR = "Please be aware that the DDK Bot does record this conversation.\r\nWe only use this data to improve the Bots conversation accuracy and to contact you if you requested.\r\nWe will never pass this data onto any 3rd Party.\r\nFurther details on DDK Privacy can be found on our web site.";
 
-            foreach (var member in membersAdded)
-            {
-                if (member.Id != turnContext.Activity.Recipient.Id)
-                {
-                    
-                    await turnContext.SendActivityAsync($"Welcome to our DDK Bot! {WelcomeText}"); 
-                    await turnContext.SendActivityAsync(MessageFactory.Text(GDPR), cancellationToken);
-                    
-                }
-            }
+            // This method is redundant at the mo. Ive moved the welcome text to the event handler to manage calling teh bot from different client sources            
+            await _conversationState.SaveChangesAsync(turnContext, false, cancellationToken);
+            await _userState.SaveChangesAsync(turnContext, false, cancellationToken);
+            
         }
+    
         private async Task DispatchToTopIntentAsync(ITurnContext<IMessageActivity> turnContext, string intent, RecognizerResult recognizerResult, CancellationToken cancellationToken)
         {
 
