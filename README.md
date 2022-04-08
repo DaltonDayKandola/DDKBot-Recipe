@@ -1,6 +1,6 @@
 # DDKBot-Recipe
 
-The DDBBot is DDK's chat bot, currently used in the [Contact Me](https://www.ddklimited.com/contact/) page on our web site and is based on Microsoft's Bot Framework, Azure Infrastructure and Azure cognitive Services, LUIS and QnA Maker.
+The DDKBot is DDK's chat bot, currently used in the [Contact Me](https://www.ddklimited.com/contact/) page on our web site and is based on Microsoft's Bot Framework, Azure Infrastructure and Azure cognitive Services, LUIS and QnA Maker.
 
 We make use of the Bot Framework v4 NLP with Dispatch bot sample.
 
